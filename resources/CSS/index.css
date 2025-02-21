@@ -35,50 +35,78 @@
 
 .mission-container {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center-align items horizontally */
-    width: 100%;
-    height: auto;
-    padding-top: 50px;
-    padding-bottom: 150px;
-    background-color: #d77c00;
-    color: white;    
+    flex-direction: column; /* Stack title and content vertically */
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background-color: #432220; /* Light background for better contrast */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row; /* Align sections side by side */
+    justify-content: space-between; /* Add space between sections */
+    align-items: stretch; /* Ensure both sections stretch to the same height */
+    width: 100%; /* Full width of parent container */
+    max-width: 1200px; /* Limit maximum width for better readability */
 }
 
 .left-section, .right-section {
-    width: 100%; /* Ensure sections span full width of container */
-    display: flex;
-    flex-direction: column; /* Ensure content inside each section stacks vertically */
-    align-items: center; /* Center-align content inside sections */
-    justify-content: center; /* Center-align content vertically */
+    width: 50%; /* Each section takes up half of the container width */
     padding: 40px;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically inside each section */
+    justify-content: center; /* Center content vertically within each section */
+    height: 400px; /* Set a consistent height for both sections */
 }
 
 .left-section {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    background-color: #432220;
+    background-color: #fff; /* Brown background for left section */
+    color: brown;
+    text-align: left; /* Align text to the left */
 }
+
+.left-section h3 {
+    font-size: 1.8rem;
+}
+
+.left-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 
 .left-section div {
     text-align: left;
 }
 
+.left-section button {
+    margin-top: 20px;
+    background-color: #432220; /* Dark brown button background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+  }
+
 .right-section {
-    width: 50%;
-    display: flex;
-    padding: 40px;
-    background-color: #f2ceae;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    background-color: #f2ceae; /* Beige background for right section */
+    color: black;
+}
+
+.right-section h3 {
+    font-size: 1.8rem;
 }
 
 .right-section div {
     text-align: center;
+}
+
+.mission-title {
+    margin-bottom: 30px; /* Add spacing below the heading */
+}
+
+.mission-title h2 {
+    font-size: 2.5rem;
+    color: white; /* Match title color with design */
 }
 
 .mission-container h3 {
@@ -101,39 +129,110 @@
     line-height: 1.6;
 }
 
-footer {
-    padding-top: 10px;
-    padding-bottom: 50px;
-    background-color: #f2ceae;
-    color: white;   
+.footer {
+    background-image: url('your-image.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Set text color */
+    padding: 20px;
+    position: relative;
+    overflow: hidden; /* To contain floated elements and absolutely positioned pseudo-elements */
 }
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f2ceae; /* Adjust the color and opacity as needed */
+    z-index: 0; /* Place the overlay behind the content */
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1; /* Place the content above the overlay */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+}
+  
+.newsletter {
+    flex: 1;
+}
+  
+.newsletter-label {
+      color: white;
+      opacity: 0.7;
+      margin-bottom: 10px;
+}
+  
+.newsletter-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+}
+  
+.email-input {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: white;
+}
+  
+.email-input input {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    color: grey;
+}
+  
+.email-input button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+/*Partner section content */
 
 .partners-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     background-color: #432220;
-    padding: 40px;
+    padding: 80px 40px 40px; /* Increased top padding */
     color: white;
     border-bottom: 5px solid white;
+    position: relative;
 }
 
 .partners-text {
-    width: 50%
+    width: 30%; /* Adjusted width */
+    position: sticky;
+    top: 80px; /* Increased distance from the top */
+    align-self: flex-start;
 }
 
 .partners-text h3 {
     font-size: 3rem;
     font-weight: bold;
+    margin-bottom: 20px; /* Added margin below the title */
 }
 
-.partners p{
+.partners p {
     font-size: 1.2rem;
     line-height: 1.5;
 }
 
 .partners-list {
-    width: 45%;
+    width: 70%; /* Adjusted width */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -141,23 +240,94 @@ footer {
 
 .partners-item {
     background-color: #f2ceae;
-    padding: 10px 20px;
+    padding: 15px 20px;
     font-size: 1.5rem;
     font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
     color: #432220;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
 }
 
-.partners-item::before {
-    content: "x";
-    font-size: 1.2rem;
+.dropdown-content {
+    width: 100%;
+    background-color: #f2ceae;
+    padding: 10px 20px;
+    border-radius: 0 0 25px 25px;
+    display: none;
+    color: #432220;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.4;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
 }
 
-.content-container {
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+.container {
     display: flex;
-    flex-direction: column; /* Stack left and right sections vertically */
-    gap: 20px; /* Add spacing between sections */
-    width: 80%; /* Adjust width for better alignment */
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.left-section {
+    width: 50%;
+}
+
+.left-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.left-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons button {
+    font-size: 1rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.primary {
+    background-color: #E87A59;
+    color: #fff;
+}
+
+.secondary {
+    background-color: transparent;
+    border: 1px solid #E87A59;
+    color: #E87A59;
+}
+
+.right-section {
+    width: 50%;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
 }

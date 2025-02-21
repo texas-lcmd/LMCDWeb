@@ -43,19 +43,18 @@
     <div class="banner">
         <h1>Longhorns Crushing Medical Debt</h1>
     </div>
-    <div class="mission-container">
-        <div class="mission-title">
-            <h2>We Crush Medical Bills</h2>
-        </div>
-        <div class="content-container">
-            <div class="left-section">
-                <h3>OUR MISSION</h3>
-                <p>Our mission is to blah blah blah</p>
+    <div class="container">
+        <div class="left-section">
+            <h1>We Crush Medical Debt</h1>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam</p>
+            <div class="buttons">
+                <button class="primary">Lets cook</button>
+                <button class="secondary">Explore now</button>
             </div>
-            <div class="right-section">
-                <h4>OUR DF VISION</h4>
-                <p>Our vision is to blah blah blah</p>
-                <button>DEBT SCREENER</button>
+        </div>
+        <div class="right-section">
+            <div class="image-container">
+                <img src="imageurl" alt="cooking image">
             </div>
         </div>
     </div>
@@ -65,15 +64,59 @@
             <p>Blah blah blah</p>
         </div>
         <div class="partners-list">
-            <div class="partners-item">Micah 6</div>
-            <div class="partners-item">CommUnity Care</div> 
-            <div class="partners-item">Street Forum</div>
-            <div class="partners-item">Sunrise Homeless Navigation Center</div>
+            <div class="partners-item dropdown">
+                Micah 6
+                <div class="dropdown-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="partners-item dropdown">
+                CommUnity Care
+                <div class="dropdown-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="partners-item dropdown">
+                Street Forum
+                <div class="dropdown-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="partners-item dropdown">
+                Sunrise Homeless Navigation Center
+                <div class="dropdown-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
         </div>
     </div>
-    <footer>
-        <h4>Mail</h4>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const dropdowns = document.querySelectorAll('.dropdown');
+      
+          dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', function() {
+              this.classList.toggle('active');
+            });
+          });
+        });
+      </script>
+    
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="newsletter">
+                <p class="newsletter-label">NEWSLETTER</p>
+                <h2 class="newsletter-title">Subscribe our newsletter.</h2>
+                <div class="email-input">
+                    <input type="email" placeholder=" @ enter your email-address">
+                    <button><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
     </footer>
+    <script src="app.js"></script>
     <script src="app.js"></script>
   </body>   
 </html>   
