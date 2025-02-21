@@ -35,12 +35,23 @@
 
 .mission-container {
     display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items horizontally */
     width: 100%;
     height: auto;
     padding-top: 50px;
     padding-bottom: 150px;
     background-color: #d77c00;
     color: white;    
+}
+
+.left-section, .right-section {
+    width: 100%; /* Ensure sections span full width of container */
+    display: flex;
+    flex-direction: column; /* Ensure content inside each section stacks vertically */
+    align-items: center; /* Center-align content inside sections */
+    justify-content: center; /* Center-align content vertically */
+    padding: 40px;
 }
 
 .left-section {
@@ -144,4 +155,9 @@ footer {
     font-size: 1.2rem;
 }
 
-
+.content-container {
+    display: flex;
+    flex-direction: column; /* Stack left and right sections vertically */
+    gap: 20px; /* Add spacing between sections */
+    width: 80%; /* Adjust width for better alignment */
+}
