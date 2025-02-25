@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LCMD Website Here</title>
     <link rel="stylesheet" href="/resources/CSS/styles.css">
+    <link rel="stylesheet" href="/resources/CSS/resources.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/resources.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar__container">
-            <a href="/index.html" id="navbar__logo">NEXT</a>
+            <a href="/index.html" id="navbar__logo"><img src="resources/images/Longhorns crushing medical debt.png" alt=""></a>
             <div class="navbar__toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -20,7 +26,7 @@
                     <a href="/about.html" class="navbar__links">About</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSetebTobZBy2C8QYlhJnQDZLHvb17z4R3TwwuVE6NDPvPgE9A/viewform?usp=sf_link" class="navbar__links">Join</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSetebTobZBy2C8QYlhJnQDZLHvb17z4R3TwwuVE6NDPvPgE9A/viewform?usp=sf_link" target="_blank" class="navbar__links">Join</a>
                 </li>
                 <li class="navbar__item">
                     <a href="/resources.html" class="navbar__links">Resources</a>
@@ -34,5 +40,65 @@
             </ul>
         </div>
     </nav>
+
+    <header>
+        <h1>Resources</h1>
+    </header>
+
+    <div class="container">
+        <div class="left-section">
+            <div class="menu-item active" data-content="points">
+                <h2>Member Points</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore.</p>
+            </div>
+            <div class="menu-item" data-content="ambassador">
+                <h2>Ambassador Resources</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore.</p>
+            </div>
+            <div class="menu-item" data-content="meeting">
+                <h2>General Meeting Resources</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore.</p>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="content-item" id="points">
+                <h2>Introduction to Business Consulting</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore.</p>
+                <ul>
+                    <li>Helping small businesses</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Business Strategy and Management</li>
+                </ul>
+            </div>
+
+            <div class="content-item" id="ambassador" style="display: none;">
+                <h2>Want to become a Dollar For Ambassador?</h2>
+                <p>Ambassadors get the word out to the community about Dollar For's programs and charity care. Dollar For can only help patients receive financial assistance if they are aware of the services that are offered.
+                    If you are interested in signing up to become a Volunteer Ambassador please complete the following:
+                    
+                    1. Click Here and check the Ambassador Box so we can have your e-mail on file. You will then receive an email with all the tools you need to get started!
+                    2. Download our Key Talking Points to familiarize yourself with Dollar For's mission and services. This will prepare you to speak to potential clients and to promote Dollar For in the near future!
+                    3. See our Public Talking Scripts if you want more detailed responses on any questions that might arise during  tabling/outreach events.
+                    4. View additional Spanish Resources to provide more information when doing outreach in communities with Spanish speaking individuals..</p>
+            </div>
+
+            <div class="content-item" id="meeting" style="display: none;">
+                <h2>Follow the Links below to access General Meeting Slides</h2>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="newsletter">
+                <p class="newsletter-label">NEWSLETTER</p>
+                <h2 class="newsletter-title">Subscribe our newsletter.</h2>
+                <div class="email-input">
+                    <input type="email" placeholder=" @ enter your email-address">
+                    <button><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

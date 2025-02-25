@@ -12,7 +12,6 @@
     padding: 20px;
     font-family: 'Oswald', sans-serif !important;
     position: relative;
-    margin-top: 10px;
 }
 
 .banner::before,
@@ -33,37 +32,43 @@
     bottom: 10px;
 }
 
-.mission-container {
+.container {
     display: flex;
-    flex-direction: column; /* Stack title and content vertically */
+    justify-content: center;
     align-items: center;
-    text-align: center;
     padding: 50px;
-    background-color: #432220; /* Light background for better contrast */
+    height: 500px;
+    background-image: url('https://news.utexas.edu/wp-content/uploads/2020/01/iStock-155441000.jpg'); /* Add background image */
+    background-size: cover; /* Cover the entire section with the background image */
+    background-position: center-top; /* Center the background image */
 }
 
-.content-container {
-    display: flex;
-    flex-direction: row; /* Align sections side by side */
-    justify-content: space-between; /* Add space between sections */
-    align-items: stretch; /* Ensure both sections stretch to the same height */
-    width: 100%; /* Full width of parent container */
-    max-width: 1200px; /* Limit maximum width for better readability */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 215px;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1; /* Place it below the text */
 }
 
-.left-section, .right-section {
-    width: 50%; /* Each section takes up half of the container width */
+.container * {
+    position: relative; /* Ensure content stays above the overlay */
+    z-index: 2;
+}
+
+.left-section {
+    color: white;
+    text-align: center; /* Align text to the left */
+    width: 100%; /* Each section takes up half of the container width */
     padding: 40px;
     display: flex;
     flex-direction: column; /* Ensure content stacks vertically inside each section */
     justify-content: center; /* Center content vertically within each section */
+    align-items: center;
     height: 400px; /* Set a consistent height for both sections */
-}
-
-.left-section {
-    background-color: #fff; /* Brown background for left section */
-    color: brown;
-    text-align: left; /* Align text to the left */
 }
 
 .left-section h3 {
@@ -81,203 +86,16 @@
 
 .left-section button {
     margin-top: 20px;
-    background-color: #432220; /* Dark brown button background */
-    color: white;
+    background-color: white; /* Dark brown button background */
+    color: #321917; /* White button text */
     border: none;
     padding: 10px 20px;
-  }
-
-.right-section {
-    background-color: #f2ceae; /* Beige background for right section */
-    color: black;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
 }
 
-.right-section h3 {
-    font-size: 1.8rem;
-}
-
-.right-section div {
-    text-align: center;
-}
-
-.mission-title {
-    margin-bottom: 30px; /* Add spacing below the heading */
-}
-
-.mission-title h2 {
-    font-size: 2.5rem;
-    color: white; /* Match title color with design */
-}
-
-.mission-container h3 {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.mission-container button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-.mission-container h4 {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.footer {
-    background-image: url('your-image.jpg'); /* Replace with your image URL */
-    background-size: cover;
-    background-position: center;
-    color: #fff; /* Set text color */
-    padding: 20px;
-    position: relative;
-    overflow: hidden; /* To contain floated elements and absolutely positioned pseudo-elements */
-}
-
-.footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f2ceae; /* Adjust the color and opacity as needed */
-    z-index: 0; /* Place the overlay behind the content */
-}
-
-.footer-content {
-    position: relative;
-    z-index: 1; /* Place the content above the overlay */
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 50px;
-}
-  
-.newsletter {
-    flex: 1;
-}
-  
-.newsletter-label {
-      color: white;
-      opacity: 0.7;
-      margin-bottom: 10px;
-}
-  
-.newsletter-title {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: white;
-}
-  
-.email-input {
-    display: flex;
-    align-items: center;
-    max-width: 400px;
-    border-radius: 50px;
-    overflow: hidden;
-    background-color: white;
-}
-  
-.email-input input {
-    flex: 1;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 50px;
-    outline: none;
-    color: grey;
-}
-  
-.email-input button {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-/*Partner section content */
-
-.partners-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: #432220;
-    padding: 80px 40px 40px; /* Increased top padding */
-    color: white;
-    border-bottom: 5px solid white;
-    position: relative;
-}
-
-.partners-text {
-    width: 30%; /* Adjusted width */
-    position: sticky;
-    top: 80px; /* Increased distance from the top */
-    align-self: flex-start;
-}
-
-.partners-text h3 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px; /* Added margin below the title */
-}
-
-.partners p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-}
-
-.partners-list {
-    width: 70%; /* Adjusted width */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.partners-item {
-    background-color: #f2ceae;
-    padding: 15px 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #432220;
-    border-radius: 25px;
-    cursor: pointer;
-    position: relative;
-}
-
-.dropdown-content {
-    width: 100%;
-    background-color: #f2ceae;
-    padding: 10px 20px;
-    border-radius: 0 0 25px 25px;
-    display: none;
-    color: #432220;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 1.4;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-}
-
-.dropdown.active .dropdown-content {
-    display: block;
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-}
-
-.left-section {
-    width: 50%;
+.left-section button:hover {
+    background-color: #d77c00; /* White button background on hover */
+    color: white; /* Dark brown button text on hover */
 }
 
 .left-section h1 {
@@ -315,19 +133,76 @@
     color: #E87A59;
 }
 
-.right-section {
-    width: 50%;
-}
+/*Partner section content */
 
-.image-container {
+.partners-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #321917;
+    padding: 80px 40px 40px; /* Increased top padding */
+    color: white;
+    border-bottom: 5px solid #321917;
     position: relative;
-    width: 100%;
-    border-radius: 50%;
-    overflow: hidden;
 }
 
-.image-container img {
+.partners-text {
+    width: 30%; /* Adjusted width */
+    position: sticky;
+    top: 80px; /* Increased distance from the top */
+    align-self: flex-start;
+}
+
+.partners-text h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px; /* Added margin below the title */
+}
+
+.partners p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.partners-list {
+    width: 70%; /* Adjusted width */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.partners-item {
+    background-color: white;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #321917;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease-in;
+}
+
+.partners-item:hover {
+    background-color: #d77c00;
+}
+
+.dropdown-content {
     width: 100%;
-    height: auto;
-    vertical-align: middle;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 0 0 25px 25px;
+    display: none;
+    color: #432220;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.4;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
 }
