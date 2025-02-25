@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #321917; /* Light background */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 80%; /* Adjust as needed */
+    margin: 20px auto;
+    background-color: #fff; /* White container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.left-section {
+    width: 30%; /* Adjust as needed */
+    padding: 20px;
+}
+
+.menu-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #eee; /* Light gray */
+    cursor: pointer;
+    border-left: 5px solid transparent; /* For the active state */
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #d77c00;
+
+}
+
+.menu-item.active {
+    border-left-color: #d77c00; /* Example accent color */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.right-section {
+    width: 70%; /* Adjust as needed */
+    padding: 20px;
+}
+
+.content-item p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Basic list styling */
+.content-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}

@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LCMD Website Here</title>
     <link rel="stylesheet" href="/resources/CSS/styles.css">
+    <link rel="stylesheet" href="/resources/CSS/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar__container">
-            <a href="/index.html" id="navbar__logo">NEXT</a>
+            <a href="/index.html" id="navbar__logo"><img src="resources/images/Longhorns crushing medical debt.png" alt=""></a>
             <div class="navbar__toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -20,7 +25,7 @@
                     <a href="/about.html" class="navbar__links">About</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSetebTobZBy2C8QYlhJnQDZLHvb17z4R3TwwuVE6NDPvPgE9A/viewform?usp=sf_link" class="navbar__links">Join</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSetebTobZBy2C8QYlhJnQDZLHvb17z4R3TwwuVE6NDPvPgE9A/viewform?usp=sf_link" target="_blank" class="navbar__links">Join</a>
                 </li>
                 <li class="navbar__item">
                     <a href="/resources.html" class="navbar__links">Resources</a>
@@ -34,5 +39,51 @@
             </ul>
         </div>
     </nav>
+    <section class="contact-us">
+        <div class="contact-info">
+          <h1>Contact Us</h1>
+          <p>Have questions about Longhorns Crushing Medical Debt, or interested in joining? Please reach out — we’re happy to help.</p>
+          <p>Austin, TX, USA</p>
+          <p><a href="mailto:texas.lcmd@gmail.com">texas.lcmd@gmail.com</a></p>
+          <div class="social-icons">
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="email-icon.png" alt="Email"></a>
+          </div>
+        </div>
+    
+        <form class="contact-form" action="#" method="POST">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" placeholder="Enter your address">
+    
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+    
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Type the subject">
+    
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Type your message here..." rows="5"></textarea>
+    
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="newsletter">
+                <p class="newsletter-label">NEWSLETTER</p>
+                <h2 class="newsletter-title">Subscribe our newsletter.</h2>
+                <div class="email-input">
+                    <input type="email" placeholder=" @ enter your email-address">
+                    <button><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,75 @@
+/* About Page Styles */
+
+.about-content {
+    padding: 20px; /* Add padding around the whole section */
+    font-family: sans-serif; /* Consistent font */
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-header h1 {
+    font-size: 2em; /* Adjust as needed */
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 1.1em;
+    color: #555; /* A slightly muted color */
+}
+
+.about-amounts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.amount {
+    text-align: center;
+}
+
+.amount h2 {
+    font-size: 5em; /* Adjust as needed */
+    color: #C0C0C0; /* Light Gray Color */
+    margin-bottom: 5px;
+}
+
+.amount p {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.about-description {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.learnbutton {
+    background-color: #432220; /* Dark brown button background */
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 50px;
+    position: relative;   /* Make sure position is relative */
+    top: 10px;            /* Move the button down 10px */
+    display: inline-block; /* Important: Treat like a block element */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.learnbutton:hover {
+    background: black;
+}
+.button:hover {
+    background: black;
+}
+
