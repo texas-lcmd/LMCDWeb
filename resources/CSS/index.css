@@ -4,7 +4,7 @@
 }
 
 .banner {
-    background-color: #d77c00;
+    background-color: #906749;
     color: white;
     font-weight: bold;
     font-size: 2rem;
@@ -87,7 +87,7 @@
 .left-section button {
     margin-top: 20px;
     background-color: white; /* Dark brown button background */
-    color: #321917; /* White button text */
+    color: #6c584c; 
     border: none;
     padding: 10px 20px;
     transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
@@ -123,14 +123,14 @@
 }
 
 .primary {
-    background-color: #E87A59;
+    background-color: #6c584c;
     color: #fff;
 }
 
 .secondary {
     background-color: transparent;
-    border: 1px solid #E87A59;
-    color: #E87A59;
+    border: 1px solid #6c584c;
+    color: #6c584c;
 }
 
 /*Partner section content */
@@ -139,10 +139,10 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: #321917;
+    background-color: #2b1b1e;
     padding: 80px 40px 40px; /* Increased top padding */
     color: white;
-    border-bottom: 5px solid #321917;
+    border-bottom: 5px solid #000000;
     position: relative;
 }
 
@@ -170,16 +170,15 @@
     flex-direction: column;
     gap: 10px;
 }
-
 .partners-item {
-    background-color: white;
+    background-color: #D1C0A8;
     padding: 15px 20px;
     font-size: 1.5rem;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #321917;
+    color: #4f2a14;
     border-radius: 25px;
     cursor: pointer;
     position: relative;
