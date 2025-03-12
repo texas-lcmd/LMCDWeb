@@ -75,22 +75,35 @@
 
 /* Officer Grid */
   .officer-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #77543f;
     text-align: center; /* Center the title and subtitle */
-    margin-bottom: 30px; /* Add spacing below the title */
+    position: relative;
   }
   
 
 .officer-title h1 {
     font-size: 2.5em; /* Larger font size for better emphasis */
     font-weight: bold;
+    color: white;
 }
 
 .officer-title p {
     font-size: 1.2em;
-    color: #555; /* Slightly muted color */
+    color: white; /* Slightly muted color */
 }
 
-.officer-cards {
+.officer-cards-line1{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.officer-cards-line2 {
     padding: 40px;
     display: flex;
     justify-content: center;
@@ -101,6 +114,7 @@
 
   
   .officer-card {
+    padding: 10px 10px 10px;
     text-align: center;
     background-color: white;
     border-radius: 10px;

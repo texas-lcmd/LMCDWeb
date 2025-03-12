@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #906749;
   }
   
   .contact-us {
@@ -26,7 +26,7 @@ body {
   
   .contact-info h1 {
     font-size: 2rem;
-    color: #4b2e2e;
+    color: #2b1b1e;
   }
   
   .contact-info p {
@@ -35,7 +35,7 @@ body {
   
   .contact-info a {
     text-decoration: none;
-    color: #4b2e2e;
+    color: #160e0f;
   }
   
   .social-icons {
@@ -63,14 +63,23 @@ body {
     width: calc(100% - 20px);
     padding: 10px;
     margin-top: 5px;
+    border-radius: 15px;
   }
-  
+  .contact-form button{
+    background-color: #2b1b1e;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .contact-form button:focus{
+    outline: none;
+  }
   .contact-form input,
   .contact-form textarea {
     border: solid #ccc thin;
   }
   
   .contact-form button {
-    background-color: #4b2e2e;
+    background-color: #2b1b1e;
    color:white ;
   }
