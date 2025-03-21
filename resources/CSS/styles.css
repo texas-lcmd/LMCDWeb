@@ -186,10 +186,12 @@
 .footer {
     background-size: cover;
     background-position: center;
-    color: #fff; /* Set text color */
+    color: #fff;
     padding: 20px;
     position: relative;
-    overflow: hidden; /* To contain floated elements and absolutely positioned pseudo-elements */
+    overflow: hidden;
+    width: 100%;
+    margin-top: auto;
 }
 
 .footer::before {
@@ -199,8 +201,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #906749; /* Adjust the color and opacity as needed */
-    z-index: 0; /* Place the overlay behind the content */
+    background-color: #906749;
+    z-index: 0;
 }
 
 .footer-content {

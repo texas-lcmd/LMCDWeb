@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #321917; /* Light background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -20,6 +23,8 @@ header h1{
     margin: 20px auto;
     background-color: #fff; /* White container */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex: 1;
+    margin-bottom: 20px;
 }
 
 .left-section {
