@@ -19,16 +19,17 @@ header h1{
 
 .container {
     display: flex;
-    width: 80%; /* Adjust as needed */
+    width: 80%; /* Reverted back to 80% */
     margin: 20px auto;
     background-color: #fff; /* White container */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     flex: 1;
     margin-bottom: 20px;
+    min-height: calc(100vh - 300px); /* Ensure container takes up available space */
 }
 
 .left-section {
-    width: 30%; /* Adjust as needed */
+    width: 30%; /* Reverted back to 30% */
     padding: 20px;
 }
 
@@ -53,9 +54,9 @@ header h1{
 }
 
 .right-section {
-    width: 80%; /* Adjust as needed */
+    width: 70%; /* Adjusted to 70% */
     padding: 20px;
-    margin: auto;
+    margin: auto; /* Restored auto margin */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
