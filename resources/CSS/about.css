@@ -58,19 +58,18 @@
     background-color: #432220; /* Dark brown button background */
     color: white;
     border: none;
-    padding: 10px 10px;
+    padding: 10px 15px;
+    margin-top: 20px;
     border-radius: 50px;
     position: relative;   /* Make sure position is relative */
     top: 10px;            /* Move the button down 10px */
     display: inline-block; /* Important: Treat like a block element */
     text-decoration: none; /* Remove underline from the link */
+    transition: all 0.3s ease-in;
 }
 
 .learnbutton:hover {
-    background: black;
-}
-.button:hover {
-    background: black;
+    background: #b96230;
 }
 
 /* Officer Grid */
