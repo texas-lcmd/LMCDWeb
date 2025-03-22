@@ -24,7 +24,6 @@ header h1{
     background-color: #fff; /* White container */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     flex: 1;
-    margin-bottom: 20px;
     min-height: calc(100vh - 300px); /* Ensure container takes up available space */
 }
 
@@ -39,16 +38,16 @@ header h1{
     background-color: #eee; /* Light gray */
     cursor: pointer;
     border-left: 5px solid transparent; /* For the active state */
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease-in;
 }
 
 .menu-item:hover {
-    background-color: #d77c00;
+    background-color: #b96230;
 
 }
 
 .menu-item.active {
-    border-left-color: #d77c00; /* Example accent color */
+    border-left-color: #b96230; /* Example accent color */
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -104,10 +103,11 @@ header h1{
     top: 10px;            /* Move the button down 10px */
     display: inline-block; /* Important: Treat like a block element */
     text-decoration: none; /* Remove underline from the link */
+    transition: all 0.3s ease-in;
 }
 
 .memberpoints-buttons .learnbutton:hover {
-    background-color: #0056b3;
+    background-color: #b96230;
 }
 
 /* Responsive Design */
