@@ -17,7 +17,7 @@
 
 .about-header p {
     font-size: 1.1em;
-    color: #555; /* A slightly muted color */
+    color: #2e1f15; /* Updated to match home page text color */
 }
 
 .about-amounts {
@@ -33,14 +33,14 @@
 
 .amount h2 {
     font-size: 5.5rem; /* Adjust as needed */
-    color: #b96230;
+    color: #bd724a; /* Updated to match banner color */
     margin-bottom: 5px;
 }
 
 .amount p {
     font-size: 1.5rem;
     text-transform: uppercase;
-    color: #777;
+    color: #2e1f15; /* Updated to match home page text color */
 }
 
 .about-description {
@@ -55,7 +55,7 @@
 }
 
 .learnbutton {
-    background-color: #432220; /* Dark brown button background */
+    background-color: #6c584c; /* Updated to match primary button color */
     color: white;
     border: none;
     padding: 10px 15px;
@@ -69,7 +69,7 @@
 }
 
 .learnbutton:hover {
-    background: #b96230;
+    background: #bd724a; /* Updated to match hover color */
 }
 
 /* Officer Grid */
@@ -77,7 +77,7 @@
     margin-top: 30px;
     margin-bottom: 30px;
     padding: 20px;
-    background-color: #77543f;
+    background-color: #745644; /* Updated to match navbar color */
     text-align: center; /* Center the title and subtitle */
     position: relative;
   }
@@ -94,46 +94,45 @@
     color: white; /* Slightly muted color */
 }
 
-.officer-cards-line1{
-    padding: 40px;
+.officer-cards-line1, .officer-cards-line2 {
+    padding: 20px 40px;
     display: flex;
     justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    padding: 20px;
-}
-.officer-cards-line2 {
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-  
-  .officer-card {
-    padding: 10px 10px 10px;
-    text-align: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+.officer-card {
+    flex: 0 0 calc(25% - 15px);
     padding: 20px;
+    text-align: center;
+    background-color: #f4e4d4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in;
+    min-width: 260px;
+    margin: 0;
+}
+  
+.officer-card:hover {
+    background-color: #bd724a; /* Updated to match partner item color */
   }
   
-  .officer-photo {
+.officer-photo {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     object-fit: cover; /* Ensures the image fits well */
   }
   
-  .officer-card h3 {
+.officer-card h3 {
     margin-top: 10px;
     font-size: 1.2rem;
   }
   
-  .officer-card p {
+.officer-card p {
     margin: 5px;
     font-size:1rem;
   }

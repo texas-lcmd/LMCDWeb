@@ -9,90 +9,99 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #906749;
-  }
-  
-  .contact-us {
+    background-color: #f4e4d4;
+}
+
+.contact-us {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-  }
-  
-  .contact-info {
+    background-color: #bd724a;
+}
+
+.contact-info {
     max-width: 400px;
     margin-right: 50px;
-  }
-  
-  .contact-info h1 {
+}
+
+.contact-info h1 {
     font-size: 2rem;
-    color: white;
-  }
-  
-  .contact-info p {
+    color: #2e1f15;
+}
+
+.contact-info p {
     margin: 10px 0;
-  }
-  
-  .contact-info a {
+    color: #2e1f15;
+}
+
+.contact-info a {
     text-decoration: none;
-    color: #160e0f;
-  }
-  
-  .social-icons {
+    color: #2e1f15;
+}
+
+.social-icons {
     display: flex;
     gap: 10px;
     margin-top: 20px;
-  }
-  
-  .social-icons img {
+}
+
+.social-icons img {
     width: 24px;
-  }
-  
-  .social-icons a {
+}
+
+.social-icons a {
     font-size: 36px;
     margin: 0 15px;
-    color: white;
+    color: #2e1f15;
     transition: color 0.3s ease;
     text-decoration: none;
-  }
-  
-  .social-icons a:hover {
-    color: #b96230;
-  }
-  
-  .contact-form {
+}
+
+.social-icons a:hover {
+    color: #bd724a;
+}
+
+.contact-form {
     max-width: 500px;
     width: 70%;
-  }
-  
-  .contact-form label {
+}
+
+.contact-form label {
     display: block;
     margin-top: 10px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea,
-  .contact-form button {
+    color: #2e1f15;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
     width: calc(100% - 20px);
     padding: 10px;
     margin-top: 5px;
     border-radius: 15px;
-  }
-  .contact-form button{
-    background-color: #2b1b1e;
-    color: white;
+}
+
+.contact-form button {
+    background-color: #6c584c;
+    color: #f4e4d4;
     border: none;
     cursor: pointer;
-  }
-  .contact-form button:focus{
+    transition: background-color 0.3s ease-in;
+}
+
+.contact-form button:focus {
     outline: none;
-  }
-  .contact-form input,
-  .contact-form textarea {
-    border: solid #ccc thin;
-  }
-  
-  .contact-form button {
-    background-color: #2b1b1e;
-   color:white ;
-  }
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: solid #6c584c thin;
+    background-color: #f4e4d4;
+    color: #2e1f15;
+}
+
+.contact-form button:hover {
+    background-color: #2e1f15;
+    color: #f4e4d4;
+}
