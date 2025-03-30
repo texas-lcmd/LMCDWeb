@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #321917; /* Light background */
+    background-color: #745644; /* Updated to match footer color */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -10,104 +10,145 @@ body {
 
 header {
     text-align: center;
-    padding: 20px;
+    padding: 20px; /* Reverted back to 20px */
+    background-color: #bd724a; /* Updated to match banner color */
 }
 header h1{
-    font-size: 3rem; /* Adjust as needed */
+    font-size: 3.5rem; /* Increased from 3rem */
     color: white; 
 }
 
 .container {
     display: flex;
-    width: 80%; /* Reverted back to 80% */
+    width: 70%;
     margin: 20px auto;
-    background-color: #fff; /* White container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #f4e4d4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex: 1;
-    min-height: calc(100vh - 300px); /* Ensure container takes up available space */
+    min-height: calc(100vh - 300px);
 }
 
 .left-section {
-    width: 30%; /* Reverted back to 30% */
-    padding: 20px;
+    width: 25%;
+    padding: 15px;
 }
 
 .menu-item {
-    padding: 15px;
-    margin-bottom: 10px;
-    background-color: #eee; /* Light gray */
+    padding: 25px; /* Increased from 15px */
+    margin-bottom: 15px; /* Increased from 10px */
+    background-color: #6c584c;
+    color: white;
     cursor: pointer;
-    border-left: 5px solid transparent; /* For the active state */
+    border-left: 5px solid transparent;
     transition: background-color 0.3s ease-in;
+    font-size: 1.2rem; /* Added font size */
 }
 
 .menu-item:hover {
-    background-color: #b96230;
-
+    background-color: #bd724a; /* Updated to match hover color */
 }
 
 .menu-item.active {
-    border-left-color: #b96230; /* Example accent color */
-    background-color: #fff;
+    border-left-color: #bd724a; /* Updated to match hover color */
+    background-color: #f4e4d4; /* Updated to match partners section background */
+    color: #2e1f15; /* Updated to match text color */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .right-section {
-    width: 70%; /* Adjusted to 70% */
-    padding: 20px;
-    margin: auto; /* Restored auto margin */
+    width: 75%;
+    padding: 20px; /* Standardized padding */
+    margin: 0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+    display: flex;
+    justify-content: center;
 }
 
 .content-item {
-    padding: 20px;
+    padding: 30px; /* Standardized padding */
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .content-item h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 3.2rem;
+    color: #2e1f15;
+    margin-bottom: 30px; /* Standardized margin */
+    width: 100%;
+    text-align: center;
 }
 
 .content-item ul {
     list-style-type: disc;
-    padding-left: 20px;
-    margin-bottom: 20px;
+    padding-left: 30px;
+    margin-bottom: 30px; /* Standardized margin */
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: left;
+}
+
+.content-item ol {
+    list-style-type: decimal;
+    padding-left: 40px;
+    margin-bottom: 30px; /* Standardized margin */
+    font-size: 1.8rem;
+    width: 100%;
+    text-align: left;
 }
 
 .content-item li {
-    margin-bottom: 5px;
+    margin-bottom: 15px; /* Standardized margin */
 }
 
 .content-item p {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px; /* Standardized margin */
+    margin-bottom: 20px; /* Standardized margin */
+    font-size: 1.5rem;
+    line-height: 1.5;
+    width: 100%;
+}
+
+/* Ambassador Section Specific Styles */
+#ambassador p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 30px; /* Standardized margin */
+}
+
+#ambassador p strong {
+    font-size: 1.8rem;
+}
+
+#ambassador ol {
+    margin-top: 30px; /* Standardized margin */
 }
 
 /* Member Points Buttons Styles */
 
 .memberpoints-buttons {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Standardized margin */
+    width: 100%;
 }
 
 .memberpoints-buttons .learnbutton {
-    background-color: #432220; /* Dark brown button background */
+    background-color: #6c584c;
     color: white;
     border: none;
-    padding: 10px 10px;
+    padding: 15px 30px;
     border-radius: 50px;
-    position: relative;   /* Make sure position is relative */
-    top: 10px;            /* Move the button down 10px */
-    display: inline-block; /* Important: Treat like a block element */
-    text-decoration: none; /* Remove underline from the link */
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    text-decoration: none;
     transition: all 0.3s ease-in;
+    font-size: 1.6rem;
 }
 
 .memberpoints-buttons .learnbutton:hover {
-    background-color: #b96230;
+    background-color: #bd724a;
 }
 
 /* Responsive Design */
@@ -127,34 +168,46 @@ header h1{
 }
 
 .meeting-grid {
-    padding: 40px;
+    padding: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
-  
-.meeting-grid h2{
-    font-size: 2rem; /* Adjust as needed */
-  }
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    justify-items: center;
+}
 
-  .meeting-card {
+.meeting-grid h2 {
+    font-size: 3.2rem; /* Increased to match other headings */
+    color: #2e1f15;
+    width: 100%;
     text-align: center;
-    background-color: white;
+    margin-bottom: 40px; /* Added space between title and grid */
+    grid-column: 1 / -1; /* Makes the heading span all columns */
+}
+
+.meeting-card {
+    text-align: center;
+    background-color: #f4e4d4;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-    padding: 15px;
-  }
-  
-  .meeting-photo {
-    width: 120px;
-    height: 120px;
+    padding: 30px; /* Standardized padding */
+    transition: background-color 0.3s ease-in;
+}
+
+.meeting-card:hover {
+    background-color: #bd724a; /* Updated to match partner item color */
+}
+
+.meeting-photo {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    object-fit: cover; /* Ensures the image fits well */
-  }
-  
-  .meeting-card h3 {
-    margin-top: 10px;
-    font-size: 2rem;
-  }
+    object-fit: cover;
+}
+
+.meeting-card h3 {
+    margin-top: 20px; /* Standardized margin */
+    font-size: 2.8rem;
+    color: #2e1f15;
+}
 

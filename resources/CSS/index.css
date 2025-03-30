@@ -4,7 +4,7 @@
 }
 
 .banner {
-    background-color: #906749;
+    background-color: #bd724a; /*LCMD Banner */
     color: white;
     font-weight: bold;
     font-size: 2rem;
@@ -38,9 +38,9 @@
     align-items: center;
     padding: 50px;
     height: 500px;
-    background-image: url('https://news.utexas.edu/wp-content/uploads/2020/01/iStock-155441000.jpg'); /* Add background image */
-    background-size: cover; /* Cover the entire section with the background image */
-    background-position: center-top; /* Center the background image */
+    background-image: url('https://news.utexas.edu/wp-content/uploads/2020/01/iStock-155441000.jpg'); 
+    background-size: cover; 
+    background-position: center-top; 
 }
 
 .container::before {
@@ -50,25 +50,25 @@
     left: 0;
     width: 100%;
     height: 500px;
-    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-    z-index: 1; /* Place it below the text */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
 }
 
 .container * {
-    position: relative; /* Ensure content stays above the overlay */
+    position: relative;
     z-index: 2;
 }
 
 .left-section {
     color: white;
-    text-align: center; /* Align text to the left */
-    width: 100%; /* Each section takes up half of the container width */
+    text-align: center;
+    width: 100%;
     padding: 40px;
     display: flex;
-    flex-direction: column; /* Ensure content stacks vertically inside each section */
-    justify-content: center; /* Center content vertically within each section */
+    flex-direction: column; 
+    justify-content: center; 
     align-items: center;
-    height: 400px; /* Set a consistent height for both sections */
+    height: 400px; 
 }
 
 .left-section h3 {
@@ -86,16 +86,16 @@
 
 .left-section button {
     margin-top: 20px;
-    background-color: white; /* Dark brown button background */
-    color: #6c584c; 
+    background-color: white; 
+    color: #2e1f15; 
     border: none;
     padding: 10px 20px;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .left-section button:hover {
-    background-color: #b96230; /* White button background on hover */
-    color: white; /* Dark brown button text on hover */
+    background-color: #bd724a; /*hover button color */
+    color: white; 
 }
 
 .left-section h1 {
@@ -139,23 +139,25 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: #2b1b1e;
-    padding: 80px 40px 40px; /* Increased top padding */
-    color: white;
+    background-color: #f4e4d4; /* partner section color */
+    padding: 80px 40px 40px;
+    color: #2e1f15; /* partner subtitle color */
     position: relative;
 }
 
 .partners-text {
-    width: 30%; /* Adjusted width */
+    width: 30%; 
     position: sticky;
-    top: 80px; /* Increased distance from the top */
+    top: 80px; 
     align-self: flex-start;
 }
 
 .partners-text h3 {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 20px; /* Added margin below the title */
+    margin-bottom: 20px; 
+    color: #5e4033; /* partner title color */
+    
 }
 
 .partners p {
@@ -164,20 +166,20 @@
 }
 
 .partners-list {
-    width: 70%; /* Adjusted width */
+    width: 70%; 
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 .partners-item {
-    background-color: white;
+    background-color: #bd724a; /* partner bubble color */
     padding: 15px 20px;
     font-size: 1.5rem;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #4f2a14;
+    color: #2e1f15; /* partner font color */
     border-radius: 25px;
     cursor: pointer;
     position: relative;
@@ -185,16 +187,16 @@
 }
 
 .partners-item:hover {
-    background-color: #b96230;
+    background-color: #BF5700 ;  /* partner button hover */
 }
 
 .dropdown-content {
     width: 100%;
-    background-color: white;
+    background-color: #bd724a;  /* partner dropdown blurb hover */
     padding: 10px 20px;
     border-radius: 0 0 25px 25px;
     display: none;
-    color: #432220;
+    color: #2e1f15;  /* partner dropdown text */
     font-size: 1rem;
     font-weight: normal;
     line-height: 1.4;

@@ -6,7 +6,7 @@
 }
 
 .navbar {
-    background-color: #2b1b1e;
+    background-color: #745644;  /* nav bar */
     height: 80px;
     display: flex;
     justify-content: center;
@@ -30,22 +30,22 @@
 }
 
 #navbar__logo {
-    background-color: #fff;
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    height: 80px;
+    width: 120px;
+    padding: 0;
 }
 
 #navbar__logo img {
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* Keeps the aspect ratio */
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
 }
 
 .fa-gem {
@@ -65,7 +65,7 @@
 
 /* change color*/
 .navbar__links {
-    color: white;
+    color: #f4e4d4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,7 +84,7 @@
 }
 
 .navbar__links:hover {
-    color: #b96230;
+    color: #bd724a;
 }
 
 @media screen and (max-width: 960px) {
@@ -204,7 +204,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #906749;
+    background-color: #745644;  /* footer color */
     z-index: 0;
 }
 
@@ -225,15 +225,15 @@
 }
   
 .newsletter-label {
-      color: white;
-      opacity: 0.7;
-      margin-bottom: 10px;
+    color: #f4e4d4;
+    opacity: 0.7;
+    margin-bottom: 10px;
 }
   
 .newsletter-title {
     font-size: 2em;
     margin-bottom: 20px;
-    color: white;
+    color: #f4e4d4;
 }
   
 .email-input {
@@ -251,12 +251,12 @@
     border: none;
     border-radius: 50px;
     outline: none;
-    color: grey;
+    color: #2e1f15;
 }
   
 .email-input button {
-    background-color: #2b1b1e;
-    color: white;
+    background-color: #2e1f15;
+    color: #f4e4d4;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
