@@ -12,6 +12,7 @@
     height: 100vh;
     text-align: center;
     background-color: #77543f;
+    padding: 40px;
 }
 
 .calender-container h1 {
@@ -52,11 +53,15 @@
     .calender-container h1 {
         font-size: 2rem;
     }
+
+    .calender-container {
+        padding: 30px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .calender-container {
-        padding: 15px;
+        padding: 20px;
     }
 
     .calender-container iframe {
