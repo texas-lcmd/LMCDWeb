@@ -156,13 +156,13 @@
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 20px; 
-    color: #5e4033; /* partner title color */
-    
+    color: #2e1f15; /* partner title color */
 }
 
-.partners p {
+.partners-text p {
     font-size: 1.2rem;
-    line-height: 1.5;
+    color: #2e1f15;
+    margin-bottom: 2rem;
 }
 
 .partners-list {
@@ -187,7 +187,7 @@
 }
 
 .partners-item:hover {
-    background-color: #BF5700 ;  /* partner button hover */
+    background-color: #BF5700;  /* partner button hover */
 }
 
 .dropdown-content {
