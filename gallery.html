@@ -33,7 +33,7 @@
                 <li class="navbar__item">
                     <a href="/calender.html" class="navbar__links">Calendar</a>
                 </li>
-                <li>
+                <li class="navbar__item">
                     <a href="/gallery.html" class="navbar__links">Gallery</a>
                 </li>
                 <li class="navbar__item">
@@ -48,13 +48,36 @@
     </div>
 
     <div class="gallery-container">
-        <div class="gallery">
-            <div class="photo photo-main"></div>
-            <div class="photo photo-road"></div>
-            <div class="photo photo-winter"></div>
-            <div class="photo photo-bridge"></div>
-            <div class="photo photo-bear"></div>
-            <div class="photo photo-car"></div>
+        <button class="gallery-nav prev" aria-label="Previous page">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="gallery-nav next" aria-label="Next page">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <div class="gallery-wrapper">
+            <div class="gallery active" data-page="1">
+                <div class="photo photo-main"></div>
+                <div class="photo photo-road"></div>
+                <div class="photo photo-winter"></div>
+                <div class="photo photo-bridge"></div>
+                <div class="photo photo-bear"></div>
+                <div class="photo photo-car"></div>
+            </div>
+            
+            <div class="gallery" data-page="2">
+                <div class="photo photo-main"></div>
+                <div class="photo photo-road"></div>
+                <div class="photo photo-winter"></div>
+                <div class="photo photo-bridge"></div>
+                <div class="photo photo-bear"></div>
+                <div class="photo photo-car"></div>
+            </div>
+        </div>
+        
+        <div class="gallery-pagination">
+            <span class="page-dot active" data-page="1"></span>
+            <span class="page-dot" data-page="2"></span>
         </div>
     </div>
 
@@ -70,4 +93,5 @@
             </div>
         </div>
     </footer>
+    <script src="/resources/js/gallery.js"></script>
 </body>
