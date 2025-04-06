@@ -1,242 +1,286 @@
-body {
+/* ---------- Base Variables & Global Styles ---------- */
+:root {
+    --primary-color: #bd724a;
+    --secondary-color: #6c584c;
+    --text-color: #2e1f15;
+    --bg-color: #f4e4d4;
+    --accent-bg: #745644;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #745644; /* Updated to match footer color */
+    background-color: var(--accent-bg);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-.banner {
-    background-color: #bd724a; /*LCMD Banner */
+  }
+  
+  /* ---------- Banner & Header ---------- */
+  .banner {
+    background-color: var(--primary-color);
     color: white;
     font-weight: bold;
-    font-size: 1.5rem; /* Slightly smaller than index page */
+    font-size: 1.5rem;
     text-align: center;
-    padding: 15px; /* Slightly smaller padding */
-    font-family: 'Oswald', sans-serif !important;
+    padding: 15px;
+    font-family: 'Oswald', sans-serif;
     position: relative;
-}
-
-.banner::before,
-.banner::after {
+  }
+  
+  .banner::before,
+  .banner::after {
     content: "";
     position: absolute;
     left: 0;
     width: 100%;
-    height: 3px; /* Slightly thinner lines */
+    height: 3px;
     background-color: white;
-}
-
-.banner::before {
-    top: 8px; /* Adjusted for smaller banner */
-}
-
-.banner::after {
-    bottom: 8px; /* Adjusted for smaller banner */
-}
-
-header {
-    text-align: center;
-    padding: 20px; /* Reverted back to 20px */
-    background-color: #bd724a; /* Updated to match banner color */
-}
-header h1{
-    font-size: 3.5rem; /* Increased from 3rem */
-    color: white; 
-}
-
-.container {
+  }
+  
+  .banner::before {
+    top: 8px;
+  }
+  
+  .banner::after {
+    bottom: 8px;
+  }
+  
+  /* ---------- Main Container ---------- */
+  .container {
     display: flex;
-    width: 70%;
+    flex-direction: column;
+    width: 90%;
     margin: 20px auto;
-    background-color: #f4e4d4;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-color);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     flex: 1;
-    min-height: calc(100vh - 300px);
-}
-
-.left-section {
-    width: 25%;
     padding: 15px;
-}
-
-.menu-item {
-    padding: 25px; /* Increased from 15px */
-    margin-bottom: 15px; /* Increased from 10px */
-    background-color: #6c584c;
+  }
+  
+  /* ---------- Left Section (Menu) ---------- */
+  .left-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .menu-item {
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: var(--secondary-color);
     color: white;
     cursor: pointer;
     border-left: 5px solid transparent;
-    transition: background-color 0.3s ease-in;
-    font-size: 1.2rem; /* Added font size */
-}
-
-.menu-item:hover {
-    background-color: #bd724a; /* Updated to match hover color */
-}
-
-.menu-item.active {
-    border-left-color: #bd724a; /* Updated to match hover color */
-    background-color: #f4e4d4; /* Updated to match partners section background */
-    color: #2e1f15; /* Updated to match text color */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.right-section {
-    width: 75%;
-    padding: 20px; /* Standardized padding */
-    margin: 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-}
-
-.content-item {
-    padding: 30px; /* Standardized padding */
-    width: 90%;
-    margin: 0 auto;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+  }
+  
+  .menu-item:hover {
+    background-color: var(--primary-color);
+  }
+  
+  .menu-item.active {
+    border-left-color: var(--primary-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* ---------- Right Section (Content Area) ---------- */
+  .right-section {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .content-item {
+    margin-bottom: 30px;
     text-align: center;
-}
-
-.content-item h2 {
-    font-size: 3.2rem;
-    color: #2e1f15;
-    margin-bottom: 30px; /* Standardized margin */
-    width: 100%;
-    text-align: center;
-}
-
-.content-item ul {
-    list-style-type: disc;
-    padding-left: 30px;
-    margin-bottom: 30px; /* Standardized margin */
-    font-size: 1.5rem;
-    width: 100%;
-    text-align: left;
-}
-
-.content-item ol {
-    list-style-type: decimal;
-    padding-left: 40px;
-    margin-bottom: 30px; /* Standardized margin */
-    font-size: 1.8rem;
-    width: 100%;
-    text-align: left;
-}
-
-.content-item li {
-    margin-bottom: 15px; /* Standardized margin */
-}
-
-.content-item p {
-    margin-top: 20px; /* Standardized margin */
-    margin-bottom: 20px; /* Standardized margin */
-    font-size: 1.5rem;
+  }
+  
+  .content-item h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
+  
+  .content-item p {
+    font-size: 1.4rem;
     line-height: 1.5;
-    width: 100%;
-}
-
-/* Ambassador Section Specific Styles */
-#ambassador p {
-    font-size: 1.8rem;
-    line-height: 1.6;
-    margin-bottom: 30px; /* Standardized margin */
-}
-
-#ambassador p strong {
-    font-size: 1.8rem;
-}
-
-#ambassador ol {
-    margin-top: 30px; /* Standardized margin */
-}
-
-/* Member Points Buttons Styles */
-
-.memberpoints-buttons {
+    margin: 20px 0;
+  }
+  
+  .content-item ul,
+  .content-item ol {
+    text-align: left;
+    margin: 20px auto;
+    padding-left: 1.5rem;
+    max-width: 800px;
+  }
+  
+  .content-item ul {
+    list-style-type: disc;
+    font-size: 1.4rem;
+  }
+  
+  .content-item ol {
+    list-style-type: decimal;
+    font-size: 1.6rem;
+    padding-left: 2rem;
+  }
+  
+  .content-item li {
+    margin-bottom: 15px;
+  }
+    /* ---------- Meeting Points ---------- */
+  
+  .memberpoints-buttons {
     text-align: center;
-    margin-bottom: 30px; /* Standardized margin */
-    width: 100%;
-}
-
-.memberpoints-buttons .learnbutton {
-    background-color: #6c584c;
+    margin-bottom: 20px;
+  }
+  
+  .learnbutton {
+    background-color: var(--secondary-color);
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 12px 25px;
     border-radius: 50px;
-    position: relative;
-    top: 10px;
-    display: inline-block;
     text-decoration: none;
-    transition: all 0.3s ease-in;
-    font-size: 1.6rem;
-}
-
-.memberpoints-buttons .learnbutton:hover {
-    background-color: #bd724a;
-}
-
-/* Responsive Design */
-
-@media (max-width: 768px) {
-    .right-section {
-        width: 90%;
-        padding: 10px;
+    transition: background 0.3s ease;
+    font-size: 1.5rem;
+    display: inline-block;
+  }
+  
+  /* Adjust button for small screens */
+  @media (max-width: 480px) {
+    .learnbutton {
+      font-size: 1.2rem;
+      padding: 10px 20px;
     }
-}
-
-@media (max-width: 480px) {
-    .right-section {
-        width: 95%;
-        padding: 5px;
-    }
-}
-
-.meeting-grid {
-    padding: 30px;
+  }
+  
+  /* ---------- Meeting Grid ---------- */
+  .meeting-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    width: 100%;
-    justify-items: center;
-}
-
-.meeting-grid h2 {
-    font-size: 3.2rem; /* Increased to match other headings */
-    color: #2e1f15;
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  .meeting-grid h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
     text-align: center;
-    margin-bottom: 40px; /* Added space between title and grid */
-    grid-column: 1 / -1; /* Makes the heading span all columns */
-}
-
-.meeting-card {
-    text-align: center;
-    background-color: #f4e4d4;
+    margin-bottom: 30px;
+    grid-column: 1 / -1;
+  }
+  
+  .meeting-card {
+    background-color: var(--bg-color);
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-    padding: 30px; /* Standardized padding */
-    transition: background-color 0.3s ease-in;
-}
-
-.meeting-card:hover {
-    background-color: #bd724a; /* Updated to match partner item color */
-}
-
-.meeting-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .meeting-card:hover {
+    background-color: var(--primary-color);
+  }
+  
+  .meeting-card h3 {
+    margin-top: 15px;
+    font-size: 1.8rem;
+    color: var(--text-color);
+  }
+  
+  .meeting-photo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
-}
-
-.meeting-card h3 {
-    margin-top: 20px; /* Standardized margin */
-    font-size: 2.8rem;
-    color: #2e1f15;
-}
-
+    margin: 0 auto;
+  }
+  
+  /* ---------- Responsive Breakpoints ---------- */
+  
+  /* Tablets and larger devices */
+  @media (min-width: 480px) {
+    .container {
+      flex-direction: row;
+      gap: 20px;
+    }
+    .left-section,
+    .right-section {
+      width: 100%;
+    }
+    .left-section {
+      width: 35%;
+      margin-bottom: 0;
+      padding-right: 15px;
+      border-right: 2px solid var(--primary-color);
+    }
+    .right-section {
+      width: 65%;
+      padding-left: 15px;
+    }
+  }
+  
+  /* iPad / Medium Screens */
+  @media (min-width: 768px) {
+    .menu-item {
+      font-size: 1.2rem;
+      padding: 25px;
+    }
+    .content-item h2 {
+      font-size: 2.2rem;
+    }
+    .content-item p,
+    .content-item ul,
+    .content-item ol {
+      font-size: 1.5rem;
+    }
+    .learnbutton {
+      font-size: 1.6rem;
+    }
+  }
+  
+  /* Laptops & Desktops */
+  @media (min-width: 1024px) {
+    .container {
+      width: 80%;
+    }
+    .left-section {
+      width: 30%;
+      padding-right: 20px;
+    }
+    .right-section {
+      width: 70%;
+      padding-left: 20px;
+    }
+    .content-item h2 {
+      font-size: 2.5rem;
+    }
+    .content-item p,
+    .content-item ul,
+    .content-item ol {
+      font-size: 1.6rem;
+    }
+    .learnbutton {
+      font-size: 1.8rem;
+    }
+    .meeting-grid h2 {
+      font-size: 3rem;
+    }
+    .meeting-card h3 {
+      font-size: 2rem;
+    }
+  }
+  

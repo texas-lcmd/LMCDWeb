@@ -58,19 +58,13 @@
           </div>
         </div>
     
-        <form class="contact-form" action="#" method="POST">
+        <form class="contact-form" id="contactForm" action="#" method="POST">
           <label for="name">Name *</label>
           <input type="text" id="name" name="name" placeholder="Enter your name" required>
     
-          <label for="address">Address</label>
-          <input type="text" id="address" name="address" placeholder="Enter your address">
-    
           <label for="email">Email *</label>
           <input type="email" id="email" name="email" placeholder="Enter your email" required>
-    
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-    
+  
           <label for="subject">Subject</label>
           <input type="text" id="subject" name="subject" placeholder="Type the subject">
     
@@ -79,18 +73,104 @@
     
           <button type="submit">Submit</button>
         </form>
-      </section>
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="newsletter">
-                <p class="newsletter-label">NEWSLETTER</p>
-                <h2 class="newsletter-title">Subscribe our newsletter.</h2>
-                <div class="email-input">
-                    <input type="email" placeholder=" @ enter your email-address">
-                    <button><i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
+        <!-- Include the EmailJS library -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS with your public key
+    (function(){
+      emailjs.init("PHvhBacsE5tmNkz8N");
+    })();
+
+    // Handle the form submission
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Prepare the template parameters matching the variables in your EmailJS template
+      const templateParams = {
+        name: document.getElementById('name').value,
+        message: document.getElementById('message').value,
+        subject: document.getElementById('subject').value,
+        reply_to: document.getElementById('email').value
+      };
+
+      // Send the email using your service ID and template ID
+      emailjs.send("service_66x40fk", "template_hd5h94c", templateParams)
+        .then(function(response) {
+          alert("Message sent successfully!");
+          document.getElementById('contactForm').reset();
+        }, function(error) {
+          alert("Oops... " + JSON.stringify(error));
+        });
+    });
+  </script>
+  </section>
+
+
+<!-- Footer -->
+ <footer class="footer">
+    <div class="footer-content">
+      <div class="newsletter">
+        <h2 class="newsletter-title">Subscribe to our newsletter.</h2>
+        <div id="mc_embed_shell" class="email-input">
+          <div id="mc_embed_signup">
+            <!-- Remove inline styles from the input -->
+<form action="https://texasdollarfor.us18.list-manage.com/subscribe/post?u=05de59b78daa0dab3353ee611&amp;id=8fc51d2f0b&amp;f_id=0065a8e6f0"
+method="post"
+id="mc-embedded-subscribe-form"
+name="mc-embedded-subscribe-form"
+class="validate"
+target="_blank"
+style="background: transparent;">
+<div id="mc_embed_signup_scroll">
+<div class="mc-field-group" style="margin-bottom: 15px;">
+    <input type="email"
+           name="EMAIL"
+           class="required email"
+           id="mce-EMAIL"
+           required
+           placeholder="Enter your email">
+</div>
+<div hidden="">
+    <input type="hidden" name="tags" value="3021154">
+</div>
+<div id="mce-responses" class="clear foot">
+    <div class="response" id="mce-error-response" style="display: none;"></div>
+    <div class="response" id="mce-success-response" style="display: none;"></div>
+</div>
+<div aria-hidden="true" style="position: absolute; left: -5000px;">
+    <input type="text" name="b_05de59b78daa0dab3353ee611_8fc51d2f0b" tabindex="-1" value="">
+</div>
+<div class="optionalParent">
+    <div class="clear foot">
+        <button type="submit"
+                name="subscribe"
+                id="mc-embedded-subscribe"
+                class="learnbutton">
+            Subscribe <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+</div>
+</div>
+</form>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Load Mailchimp validation script (ensure jQuery is loaded first) -->
+  <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+  <script>
+    (function($) {
+      window.fnames = new Array(); 
+      window.ftypes = new Array();
+      fnames[0] = 'EMAIL'; ftypes[0] = 'email';
+      fnames[1] = 'FNAME'; ftypes[1] = 'text';
+      fnames[2] = 'LNAME'; ftypes[2] = 'text';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+  </script>
 </body>
 </html>
+
