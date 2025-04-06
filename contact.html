@@ -58,7 +58,7 @@
           </div>
         </div>
     
-        <form class="contact-form" action="#" method="POST">
+        <form class="contact-form" id="contactForm" action="#" method="POST">
           <label for="name">Name *</label>
           <input type="text" id="name" name="name" placeholder="Enter your name" required>
     
@@ -74,7 +74,7 @@
           <button type="submit">Submit</button>
         </form>
         <!-- Include the EmailJS library -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
     // Initialize EmailJS with your public key
     (function(){
@@ -94,7 +94,7 @@
       };
 
       // Send the email using your service ID and template ID
-      emailjs.send("service_66x40fk", "template_328lmwn", templateParams)
+      emailjs.send("service_66x40fk", "template_hd5h94c", templateParams)
         .then(function(response) {
           alert("Message sent successfully!");
           document.getElementById('contactForm').reset();
@@ -151,7 +151,7 @@ style="background: transparent;">
     </div>
 </div>
 </div>
-</formm>
+</form>
           </div>
         </div>
       </div>
