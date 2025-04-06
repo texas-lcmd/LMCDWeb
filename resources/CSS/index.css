@@ -206,3 +206,11 @@
 .dropdown.active .dropdown-content {
   display: block;
 }
+
+
+@media (min-width: 631px) and (max-width: 1035px) {
+  .container::before {
+    top: 290px;
+    height: 500px; 
+  }
+}
