@@ -1,280 +1,289 @@
-/* About Page Styles */
+/* Base Styles (Mobile-First) */
 
-.about-content {
-    padding: 20px; /* Add padding around the whole section */
-     /* Consistent font */
-}
-
-.about-header {
+:root {
+    --primary-color: #bd724a;
+    --secondary-color: #6c584c;
+    --text-color: #2e1f15;
+    --bg-color: #f4e4d4;
+    --navbar-color: #745644;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+  }
+  
+  /* About Content */
+  .about-content {
+    padding: 15px;
+    font-family: inherit;
+  }
+  
+  .about-header {
     text-align: center;
     margin-bottom: 20px;
-}
-
-.about-header h1 {
-    font-size: 2em; /* Adjust as needed */
+    padding: 0 10px;
+  }
+  
+  .about-header h1 {
+    font-size: 1.8rem;
     margin-bottom: 10px;
-}
-
-.about-header p {
-    font-size: 1.1em;
-    color: #2e1f15; /* Updated to match home page text color */
-}
-
-.about-amounts {
+  }
+  
+  .about-header p {
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+  
+  /* Amounts Section */
+  .about-amounts {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-}
-
-.amount {
+    gap: 20px;
+  }
+  
+  .amount {
     text-align: center;
-}
-
-.amount h2 {
-    font-size: 5.5rem; /* Adjust as needed */
-    color: #bd724a; /* Updated to match banner color */
+    flex: 1 1 200px;
+  }
+  
+  .amount h2 {
+    font-size: 3rem;
+    color: var(--primary-color);
     margin-bottom: 5px;
-}
-
-.amount p {
-    font-size: 1.5rem;
+  }
+  
+  .amount p {
+    font-size: 1.2rem;
     text-transform: uppercase;
-    color: #2e1f15; /* Updated to match home page text color */
-}
-
-.about-description {
+    color: var(--text-color);
+  }
+  
+  /* Description Section */
+  .about-description {
     text-align: center;
     line-height: 1.6;
-}
-
-.buttons {
+    padding: 0 10px;
+  }
+  
+  /* Learn More Button */
+  .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.learnbutton {
-    background-color: #6c584c; /* Updated to match primary button color */
+  }
+  
+  .learnbutton {
+    background-color: var(--secondary-color);
     color: white;
     border: none;
     padding: 10px 15px;
     margin-top: 20px;
     border-radius: 50px;
-    position: relative;   /* Make sure position is relative */
-    top: 10px;            /* Move the button down 10px */
-    display: inline-block; /* Important: Treat like a block element */
-    text-decoration: none; /* Remove underline from the link */
-    transition: all 0.3s ease-in;
-}
-
-.learnbutton:hover {
-    background: #bd724a; /* Updated to match hover color */
-}
-
-/* Officer Grid */
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background 0.3s ease-in;
+  }
+  
+  .learnbutton:hover {
+    background-color: var(--primary-color);
+  }
+  
+  /* Officer Section */
   .officer-title {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px 0;
     padding: 20px;
-    background-color: #745644; /* Updated to match navbar color */
-    text-align: center; /* Center the title and subtitle */
+    background-color: var(--navbar-color);
+    text-align: center;
     position: relative;
   }
   
-
-.officer-title h1 {
-    font-size: 2.5em; /* Larger font size for better emphasis */
+  .officer-title h1 {
+    font-size: 2rem;
     font-weight: bold;
     color: white;
-}
-
-.officer-title p {
-    font-size: 1.2em;
-    color: white; /* Slightly muted color */
-}
-
-.officer-cards-line1, .officer-cards-line2 {
-    padding: 20px 40px;
+  }
+  
+  .officer-title p {
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  /* Officer Cards */
+  .officer-cards-line1, .officer-cards-line2 {
+    padding: 20px 15px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.officer-card {
-    flex: 0 0 calc(25% - 15px); /* 4 cards per row on large screens */
-    padding: 20px;
+  }
+  
+  .officer-card {
+    flex: 1 1 150px;
+    padding: 15px;
     text-align: center;
-    background-color: #f4e4d4;
+    background-color: var(--bg-color);
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease-in;
-    min-width: 260px;
     margin: 0;
-}
-  
-.officer-card:hover {
-    background-color: #bd724a; /* Updated to match partner item color */
+    min-width: 150px;
   }
   
-.officer-photo {
-    width: 120px;
-    height: 120px;
+  .officer-card:hover {
+    background-color: var(--primary-color);
+  }
+  
+  .officer-photo {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    object-fit: cover; /* Ensures the image fits well */
+    object-fit: cover;
   }
   
-.officer-card h3 {
+  .officer-card h3 {
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
-.officer-card p {
+  .officer-card p {
     margin: 5px;
-    font-size:1rem;
+    font-size: 0.9rem;
   }
-
-.banner {
-    background-color: #bd724a; /*LCMD Banner */
+  
+  /* Banner */
+  .banner {
+    background-color: var(--primary-color);
     color: white;
     font-weight: bold;
-    font-size: 1.5rem; /* Slightly smaller than index page */
+    font-size: 1.5rem;
     text-align: center;
-    padding: 15px; /* Slightly smaller padding */
-    font-family: 'Oswald', sans-serif !important;
+    padding: 15px;
+    font-family: 'Oswald', sans-serif;
     position: relative;
-}
-
-.banner::before,
-.banner::after {
+  }
+  
+  .banner::before,
+  .banner::after {
     content: "";
     position: absolute;
     left: 0;
     width: 100%;
-    height: 3px; /* Slightly thinner lines */
+    height: 3px;
     background-color: white;
-}
-
-.banner::before {
-    top: 8px; /* Adjusted for smaller banner */
-}
-
-.banner::after {
-    bottom: 8px; /* Adjusted for smaller banner */
-}
-
-/* Responsive styles */
-@media screen and (max-width: 1200px) {
-    .officer-card {
-        flex: 0 0 calc(50% - 10px); /* 2 cards per row on smaller screens */
-    }
-}
-
-@media screen and (max-width: 768px) {
+  }
+  
+  .banner::before {
+    top: 8px;
+  }
+  
+  .banner::after {
+    bottom: 8px;
+  }
+  
+  /* Media Queries */
+  
+  /* Tablets and larger devices */
+  @media screen and (min-width: 480px) {
     .about-content {
-        padding: 20px;
+      padding: 20px;
     }
-
-    .about-header {
-        padding: 20px;
-    }
-
     .about-header h1 {
-        font-size: 2rem;
+      font-size: 2rem;
     }
-
     .about-header p {
-        font-size: 1rem;
+      font-size: 1.1rem;
     }
-
-    .officer-cards-line1, .officer-cards-line2 {
-        padding: 20px;
-        gap: 15px;
+    .amount h2 {
+      font-size: 4rem;
     }
-
+    .amount p {
+      font-size: 1.3rem;
+    }
     .officer-card {
-        padding: 15px;
-        min-width: 200px;
+      padding: 15px;
+      min-width: 180px;
     }
-
-    .officer-card img {
-        width: 120px;
-        height: 120px;
+    .officer-photo {
+      width: 110px;
+      height: 110px;
     }
-
     .officer-card h3 {
-        font-size: 1.2rem;
+      font-size: 1.2rem;
     }
-
     .officer-card p {
-        font-size: 0.9rem;
+      font-size: 1rem;
     }
-
-    .officer-card .social-links {
-        gap: 10px;
-    }
-
-    .officer-card .social-links a {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
+  }
+  
+  /* iPad & Medium Screens */
+  @media screen and (min-width: 768px) {
     .about-header h1 {
-        font-size: 1.8rem;
+      font-size: 2.2rem;
     }
-
     .about-header p {
-        font-size: 0.9rem;
+      font-size: 1.15rem;
     }
-
-    .officer-cards-line1, .officer-cards-line2 {
-        padding: 15px;
-        gap: 10px;
+    .amount h2 {
+      font-size: 5rem;
     }
-
+    .amount p {
+      font-size: 1.4rem;
+    }
     .officer-card {
-        padding: 10px;
-        min-width: 150px;
+      flex: 1 1 calc(33.33% - 20px);
+      min-width: 200px;
     }
-
-    .officer-card img {
-        width: 100px;
-        height: 100px;
+    .officer-photo {
+      width: 120px;
+      height: 120px;
     }
-
     .officer-card h3 {
-        font-size: 1.1rem;
+      font-size: 1.2rem;
     }
-
     .officer-card p {
-        font-size: 0.8rem;
+      font-size: 1rem;
     }
-
-    .officer-card .social-links a {
-        font-size: 0.9rem;
-    }
-}
-
-/* Ensure proper spacing on very small screens */
-@media screen and (max-width: 320px) {
+  }
+  
+  /* Laptops & Desktops */
+  @media screen and (min-width: 1024px) {
     .about-content {
-        padding: 15px;
+      padding: 25px 40px;
     }
-
-    .about-header {
-        padding: 15px;
+    .about-header h1 {
+      font-size: 2.5rem;
     }
-
+    .about-header p {
+      font-size: 1.2rem;
+    }
+    .amount h2 {
+      font-size: 5.5rem;
+    }
+    .amount p {
+      font-size: 1.5rem;
+    }
     .officer-card {
-        padding: 8px;
+      flex: 1 1 calc(25% - 20px);
+      min-width: 220px;
+      padding: 20px;
     }
-
-    .officer-card img {
-        width: 80px;
-        height: 80px;
+    .officer-photo {
+      width: 120px;
+      height: 120px;
     }
-}
+    .officer-card h3 {
+      font-size: 1.2rem;
+    }
+    .officer-card p {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,10 +1,14 @@
+/* ---------- Global Reset & Base Styles ---------- */
 * {
     box-sizing: border-box;
-    font-size: 16;
-}
-
-.banner {
-    background-color: #bd724a; /*LCMD Banner */
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ---------- Banner ---------- */
+  .banner {
+    background-color: #bd724a; /* LCMD Banner */
     color: white;
     font-weight: bold;
     font-size: 2rem;
@@ -12,166 +16,148 @@
     padding: 20px;
     font-family: 'Oswald', sans-serif !important;
     position: relative;
-}
-
-.banner::before,
-.banner::after {
+  }
+  .banner::before,
+  .banner::after {
     content: "";
     position: absolute;
     left: 0;
     width: 100%;
     height: 5px;
     background-color: white;
-}
-
-.banner::before {
+  }
+  .banner::before {
     top: 10px;
-}
-
-.banner::after {
+  }
+  .banner::after {
     bottom: 10px;
-}
-
-.container {
+  }
+  
+  /* ---------- Container with Background Image ---------- */
+  .container {
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px;
-    height: 500px;
-    background-image: url('https://news.utexas.edu/wp-content/uploads/2020/01/iStock-155441000.jpg'); 
-    background-size: cover; 
-    background-position: center-top; 
-}
-
-.container::before {
+    min-height: 500px;
+    background-image: url('https://news.utexas.edu/wp-content/uploads/2020/01/iStock-155441000.jpg');
+    background-size: cover;
+    background-position: center top;
+  }
+  .container::before {
     content: '';
     position: absolute;
     top: 205px;
     left: 0;
     width: 100%;
     height: 500px;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-}
-
-.container * {
+  }
+  .container * {
     position: relative;
     z-index: 2;
-}
-
-.left-section {
+  }
+  
+  /* ---------- Left Section (Content) ---------- */
+  .left-section {
     color: white;
     text-align: center;
     width: 100%;
     padding: 40px;
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 400px; 
-}
-
-.left-section h3 {
-    font-size: 1.8rem;
-}
-
-.left-section p {
-    font-size: 1rem;
-    line-height: 1.6;
+    /* Removed fixed height for better responsiveness */
   }
-
-.left-section div {
-    text-align: left;
-}
-
-.left-section button {
-    margin-top: 20px;
-    background-color: white; 
-    color: #2e1f15; 
-    border: none;
-    padding: 10px 20px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.left-section button:hover {
-    background-color: #bd724a; /*hover button color */
-    color: white; 
-}
-
-.left-section h1 {
+  .left-section h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-}
-
-.left-section p {
+  }
+  .left-section h3 {
+    font-size: 1.8rem;
+  }
+  .left-section p {
     font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 30px;
-}
-
-.buttons {
+  }
+  .left-section div {
+    text-align: left;
+  }
+  .left-section button {
+    margin-top: 20px;
+    background-color: white;
+    color: #2e1f15;
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .left-section button:hover {
+    background-color: #bd724a; /* hover button color */
+    color: white;
+  }
+  
+  /* ---------- Buttons ---------- */
+  .buttons {
     display: flex;
     gap: 20px;
-}
-
-.buttons button {
+    flex-wrap: wrap;
+  }
+  .buttons button {
     font-size: 1rem;
     padding: 15px 30px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-}
-
-.primary {
+  }
+  .primary {
     background-color: #6c584c;
     color: #fff;
-}
-
-.secondary {
+  }
+  .secondary {
     background-color: transparent;
     border: 1px solid #6c584c;
     color: #6c584c;
-}
-
-/*Partner section content */
-
-.partners-container {
+  }
+  
+  /* ---------- Partners Section ---------- */
+  .partners-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #f4e4d4; /* partner section color */
-    padding: 80px 40px 40px;
+    padding: 40px 20px;
     color: #2e1f15; /* partner subtitle color */
     position: relative;
-}
-
-.partners-text {
-    width: 30%; 
-    position: sticky;
-    top: 80px; 
-    align-self: flex-start;
-}
-
-.partners-text h3 {
-    font-size: 3rem;
+  }
+  .partners-text {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .partners-text h3 {
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     color: #2e1f15; /* partner title color */
-}
-
-.partners-text p {
+  }
+  .partners-text p {
     font-size: 1.2rem;
     color: #2e1f15;
     margin-bottom: 2rem;
-}
-
-.partners-list {
-    width: 70%; 
+  }
+  .partners-list {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-.partners-item {
+  }
+  .partners-item {
     background-color: #bd724a; /* partner bubble color */
     padding: 15px 20px;
     font-size: 1.5rem;
@@ -184,13 +170,11 @@
     cursor: pointer;
     position: relative;
     transition: background-color 0.3s ease-in;
-}
-
-.partners-item:hover {
+  }
+  .partners-item:hover {
     background-color: #BF5700;  /* partner button hover */
-}
-
-.dropdown-content {
+  }
+  .dropdown-content {
     width: 100%;
     background-color: #bd724a;  /* partner dropdown blurb hover */
     padding: 10px 20px;
@@ -201,8 +185,118 @@
     font-weight: normal;
     line-height: 1.4;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-}
-
-.dropdown.active .dropdown-content {
+  }
+  .dropdown.active .dropdown-content {
     display: block;
-}
+  }
+  
+  /* ---------- Responsive Styles ---------- */
+  
+  /* Mobile: For screens less than 480px */
+  @media (max-width: 479px) {
+    .banner {
+      font-size: 1.8rem;
+      padding: 15px;
+    }
+    .container {
+      padding: 20px;
+      min-height: 400px;
+    }
+    .container::before {
+      top: 150px;
+      height: 400px;
+    }
+    .left-section {
+      padding: 20px;
+    }
+    .left-section h1 {
+      font-size: 2.5rem;
+    }
+    .left-section h3 {
+      font-size: 1.5rem;
+    }
+    .left-section p {
+      font-size: 1rem;
+    }
+    .buttons button {
+      font-size: 0.9rem;
+      padding: 10px 20px;
+    }
+    .partners-text h3 {
+      font-size: 2rem;
+    }
+    .partners-text p {
+      font-size: 1rem;
+    }
+    .partners-item {
+      font-size: 1.3rem;
+      padding: 10px 15px;
+    }
+  }
+  
+  /* Tablets & Small Laptops: For screens 480px and up */
+  @media (min-width: 480px) {
+    .container {
+      padding: 40px;
+      min-height: 500px;
+    }
+    .container::before {
+      top: 205px;
+      height: 500px;
+    }
+    .left-section {
+      padding: 40px;
+    }
+    .buttons button {
+      font-size: 1rem;
+      padding: 15px 30px;
+    }
+  }
+  
+  /* Desktops: For screens 1024px and up */
+  @media (min-width: 1024px) {
+    .container {
+      padding: 50px;
+      min-height: 600px;
+    }
+    .left-section h1 {
+      font-size: 3rem;
+    }
+    .left-section h3 {
+      font-size: 1.8rem;
+    }
+    .left-section p {
+      font-size: 1.2rem;
+    }
+    .buttons button {
+      font-size: 1rem;
+      padding: 15px 30px;
+    }
+    /* Stack Partners Section Side-by-Side */
+    .partners-container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 80px 40px 40px;
+    }
+    .partners-text {
+      width: 30%;
+      text-align: left;
+      margin-bottom: 0;
+      position: sticky;
+      top: 80px;
+    }
+    .partners-list {
+      width: 70%;
+    }
+    .partners-text h3 {
+      font-size: 3rem;
+    }
+    .partners-text p {
+      font-size: 1.2rem;
+    }
+    .partners-item {
+      font-size: 1.5rem;
+      padding: 15px 20px;
+    }
+  }
+  
