@@ -212,7 +212,7 @@
   /* ---------- Responsive Breakpoints ---------- */
   
   /* Tablets and larger devices */
-  @media (min-width: 480px) {
+  @media (min-width: 670px) {
     .container {
       flex-direction: row;
       gap: 20px;
