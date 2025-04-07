@@ -3,20 +3,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbarMenu = document.querySelector('.navbar__menu');
     const navbarLinks = document.querySelectorAll('.navbar__links');
     const currentPath = window.location.pathname;
-
+  
     // Set active state for current page
     navbarLinks.forEach(link => {
         if (link.getAttribute('href') === currentPath) {
             link.classList.add('active');
         }
     });
-
+  
     // Mobile menu toggle
     mobileMenu.addEventListener('click', function() {
         mobileMenu.classList.toggle('active');
         navbarMenu.classList.toggle('active');
     });
-
+  
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
         if (!mobileMenu.contains(event.target) && !navbarMenu.contains(event.target)) {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navbarMenu.classList.remove('active');
         }
     });
-
+  
     // Close mobile menu when clicking a link
     navbarLinks.forEach(link => {
         link.addEventListener('click', function() {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navbarMenu.classList.remove('active');
         });
     });
-
+  
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -46,4 +46,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
+  });
+  
