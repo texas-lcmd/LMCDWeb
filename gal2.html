@@ -35,7 +35,7 @@
                     <a href="/calender.html" class="navbar__links">Calendar</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/gallery.html" class="navbar__links">Gallery</a>
+                    <a href="/gal2.html" class="navbar__links">Gallery</a>
                 </li>
                 <li class="navbar__item">
                     <a href="/contact.html" class="navbar__links">Contact</a>
@@ -43,6 +43,66 @@
             </ul>
         </div>
     </nav>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const menu = document.querySelector('.navbar__menu');
+        const menuToggle = document.querySelector('.navbar__toggle');
+        const navLinks = document.querySelectorAll('.navbar__links');
+    
+        // Toggle menu
+        menuToggle.addEventListener('click', function() {
+          this.classList.toggle('active');
+          menu.classList.toggle('active');
+        });
+    
+        // Close menu when clicking a link
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            menu.classList.remove('active');
+            menuToggle.classList.remove('active');
+          });
+        });
+    
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+            menu.classList.remove('active');
+            menuToggle.classList.remove('active');
+          }
+        });
+    
+        // Set active state for current page
+        const currentPath = window.location.pathname;
+        navLinks.forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+    
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+    
+        // Dropdown functionality for partnerships section
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+          dropdown.addEventListener('click', function() {
+            this.classList.toggle('active');
+          });
+        });
+      });
+    </script>
 
     <div class="banner">
         <h1>Gallery</h1>
@@ -61,6 +121,15 @@
             <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_4847.jpg" alt="Event Photo 3" class="gallery-image">
           </div>
           <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_3398.jpg" alt="Event Photo 4" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_1828.jpg" alt="Event Photo 5" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_7201.jpg" alt="Event Photo 6" class="gallery-image">
+          </div>
+          <div class="gallery-item">
             <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_3484.jpg" alt="Event Photo 4" class="gallery-image">
           </div>
           <div class="gallery-item">
@@ -70,6 +139,15 @@
             <img src="resources/images/Gallery/LCMD WEBSITE Gallery/100_4904.jpeg" alt="Event Photo 6" class="gallery-image">
           </div>
           <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/Untitled design (1).jpg" alt="Event Photo 4" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_1810.jpg" alt="Event Photo 5" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_3638.JPG" alt="Event Photo 6" class="gallery-image">
+          </div>
+          <div class="gallery-item">
             <img src="resources/images/Gallery/LCMD WEBSITE Gallery/100_4895.jpeg" alt="Event Photo 4" class="gallery-image">
           </div>
           <div class="gallery-item">
@@ -77,6 +155,15 @@
           </div>
           <div class="gallery-item">
             <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_3364.jpg" alt="Event Photo 6" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_0669.jpg" alt="Event Photo 4" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_6350.jpg" alt="Event Photo 5" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/rahi.jpg" alt="Event Photo 6" class="gallery-image">
           </div>
         </div>
     
