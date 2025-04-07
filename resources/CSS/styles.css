@@ -294,7 +294,7 @@
     margin: 0 auto; /* Centers the container itself */
     padding: 1rem; /* Outer padding around the elements */
     border-radius: 50px;
-    background-color: white;
+    background-color: #f4e4d4;
     box-sizing: border-box;
     overflow: hidden;
   }
@@ -327,7 +327,7 @@
   
 #mc_embed_signup #mce-success-response {
     background-color: #bd724a; /* orange success message background */
-    color: white; /* White text for success message */
+    color: #f4e4d4; /* White text for success message */
     display: block;
     width: 100%;
     text-align: center;
@@ -337,7 +337,7 @@
 /* Error Message Styling (Optional) */
 #mc_embed_signup #mce-error-response {
     background-color: #ff6b6b; /* Red error message background */
-    color: white; /* White text for error message */
+    color: #f4e4d4; /* White text for error message */
     display: block;
     width: 100%;
     text-align: center;
