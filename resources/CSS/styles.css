@@ -24,9 +24,10 @@
     height: 80px;
     z-index: 1;
     width: 100%;
-    padding: 0 10px 0 0; /* Reduced left padding to 0, kept right padding at 10px */
+    padding: 0 10px 0 0;
     max-width: 1300px;
     margin: 0 auto;
+    position: relative;
 }
 
 #navbar__logo {
@@ -132,12 +133,27 @@
 }
 
 @media screen and (max-width: 768px) {
+    .navbar__container {
+        padding: 0 20px;
+        position: relative;
+    }
+
     .navbar__toggle {
         display: block;
         position: absolute;
         top: 50%;
         right: 20px;
         transform: translateY(-50%);
+        z-index: 1000;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #fff;
+        transition: all 0.3s ease;
     }
 
     .navbar__toggle.active .bar:nth-child(2) {
@@ -153,47 +169,60 @@
     }
 
     .navbar__menu {
-        position: fixed;
-        left: -100%;
+        display: none;
+        position: absolute;
         top: 80px;
-        flex-direction: column;
-        background-color: #bd724a;
+        left: 0;
         width: 100%;
-        text-align: center;
-        transition: all 0.3s ease;
+        background-color: #bd724a;
         padding: 20px 0;
+        flex-direction: column;
+        text-align: center;
+        min-height: calc(100vh - 80px);
+        z-index: 999;
     }
 
     .navbar__menu.active {
-        left: 0;
+        display: flex;
     }
 
     .navbar__item {
-        height: auto;
-        margin: 16px 0;
+        width: 100%;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .navbar__links {
-        height: auto;
+        width: 100%;
         padding: 1rem;
+        color: #fff;
     }
 
+    .navbar__links:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 
+    #navbar__logo {
+        width: auto;
+        margin-left: 20px;
+    }
+
+    #navbar__logo img {
+        width: 80px;
+        height: auto;
+    }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     #navbar__logo img {
-      width: 80px; 
-      height: auto; 
+        width: 70px;
+        height: auto;
     }
-  }
-  
-  @media screen and (max-width: 480px) {
-    #navbar__logo img {
-      width: 70px; 
-      height: auto;
+    
+    .navbar__container {
+        padding: 0 15px;
     }
-  }
+}
 
 .footer {
     background-size: cover;
