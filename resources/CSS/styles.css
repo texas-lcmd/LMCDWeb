@@ -272,6 +272,32 @@
     margin: 0 auto;
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        justify-content: center;
+        padding: 30px 20px;
+    }
+    
+    .newsletter {
+        max-width: 100%;
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-content {
+        padding: 20px 15px;
+    }
+    
+    .newsletter {
+        padding: 20px 15px;
+    }
+    
+    .newsletter-title {
+        font-size: 1.8rem;
+    }
+}
   
 /* Newsletter Section */
 .newsletter {
