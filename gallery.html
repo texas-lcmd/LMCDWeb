@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LCMD Website Here</title>
-    <link rel="stylesheet" href="resources/CSS/styles.css">
+    <title>Gallery | LCMD</title>
+    <link rel="stylesheet" href="/resources/CSS/styles.css">
     <link rel="stylesheet" href="/resources/CSS/gallery.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/resources/js/gallery.js"></script>
+    
 </head>
 <body>
     <nav class="navbar">
@@ -46,188 +45,146 @@
     </nav>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const menu = document.querySelector('.navbar__menu');
-          const menuToggle = document.querySelector('.navbar__toggle');
-          const navLinks = document.querySelectorAll('.navbar__links');
-      
-          // Toggle menu
-          menuToggle.addEventListener('click', function() {
-            this.classList.toggle('active');
-            menu.classList.toggle('active');
-          });
-      
-          // Close menu when clicking a link
-          navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-              menu.classList.remove('active');
-              menuToggle.classList.remove('active');
-            });
-          });
-      
-          // Close menu when clicking outside
-          document.addEventListener('click', (e) => {
-            if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
-              menu.classList.remove('active');
-              menuToggle.classList.remove('active');
-            }
-          });
-      
-          // Set active state for current page
-          const currentPath = window.location.pathname;
-          navLinks.forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
-              link.classList.add('active');
-            }
-          });
-      
-          // Smooth scroll for anchor links
-          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-              e.preventDefault();
-              const target = document.querySelector(this.getAttribute('href'));
-              if (target) {
-                target.scrollIntoView({
-                  behavior: 'smooth',
-                  block: 'start'
-                });
-              }
-            });
-          });
-      
-          // Dropdown functionality for partnerships section
-          const dropdowns = document.querySelectorAll('.dropdown');
-          dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function() {
-              this.classList.toggle('active');
-            });
+      document.addEventListener('DOMContentLoaded', function() {
+        const menu = document.querySelector('.navbar__menu');
+        const menuToggle = document.querySelector('.navbar__toggle');
+        const navLinks = document.querySelectorAll('.navbar__links');
+    
+        // Toggle menu
+        menuToggle.addEventListener('click', function() {
+          this.classList.toggle('active');
+          menu.classList.toggle('active');
+        });
+    
+        // Close menu when clicking a link
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            menu.classList.remove('active');
+            menuToggle.classList.remove('active');
           });
         });
-      </script>
-      
+    
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+            menu.classList.remove('active');
+            menuToggle.classList.remove('active');
+          }
+        });
+    
+        // Set active state for current page
+        const currentPath = window.location.pathname;
+        navLinks.forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+    
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+    
+        // Dropdown functionality for partnerships section
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+          dropdown.addEventListener('click', function() {
+            this.classList.toggle('active');
+          });
+        });
+      });
+    </script>
 
     <div class="banner">
         <h1>Gallery</h1>
     </div>
-
-    <div class="gallery-container">
-        <button class="gallery-nav prev" aria-label="Previous page">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="gallery-nav next" aria-label="Next page">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-        
-        <div class="gallery-wrapper">
-            <div class="gallery active" data-page="1">
-                <div class="photo photo-main"></div>
-                <div class="photo photo-road"></div>
-                <div class="photo photo-winter"></div>
-                <div class="photo photo-bridge"></div>
-                <div class="photo photo-bear"></div>
-                <div class="photo photo-car"></div>
-            </div>
-            
-            <div class="gallery" data-page="2">
-                <div class="photo photo-main"></div>
-                <div class="photo photo-road"></div>
-                <div class="photo photo-winter"></div>
-                <div class="photo photo-bridge"></div>
-                <div class="photo photo-bear"></div>
-                <div class="photo photo-car"></div>
-            </div>
-            
-            <div class="gallery" data-page="3">
-                <div class="photo photo-main"></div>
-                <div class="photo photo-road"></div>
-                <div class="photo photo-winter"></div>
-                <div class="photo photo-bridge"></div>
-                <div class="photo photo-bear"></div>
-                <div class="photo photo-car"></div>
-            </div>
-            
-            <div class="gallery" data-page="4">
-                <div class="photo photo-main"></div>
-                <div class="photo photo-road"></div>
-                <div class="photo photo-winter"></div>
-                <div class="photo photo-bridge"></div>
-                <div class="photo photo-bear"></div>
-                <div class="photo photo-car"></div>
-            </div>
-        </div>
-        
-        <div class="gallery-pagination">
-            <span class="page-dot active" data-page="1"></span>
-            <span class="page-dot" data-page="2"></span>
-            <span class="page-dot" data-page="3"></span>
-            <span class="page-dot" data-page="4"></span>
-        </div>
-    </div>
-
- <!-- Footer -->
- <footer class="footer">
-    <div class="footer-content">
-      <div class="newsletter">
-        <h2 class="newsletter-title">Subscribe to our newsletter.</h2>
-        <div id="mc_embed_shell" class="email-input">
-          <div id="mc_embed_signup">
-            <!-- Remove inline styles from the input -->
-<form action="https://texasdollarfor.us18.list-manage.com/subscribe/post?u=05de59b78daa0dab3353ee611&amp;id=8fc51d2f0b&amp;f_id=0065a8e6f0"
-method="post"
-id="mc-embedded-subscribe-form"
-name="mc-embedded-subscribe-form"
-class="validate"
-target="_blank"
-style="background: transparent;">
-<div id="mc_embed_signup_scroll">
-<div class="mc-field-group" style="margin-bottom: 15px;">
-    <input type="email"
-           name="EMAIL"
-           class="required email"
-           id="mce-EMAIL"
-           required
-           placeholder="Enter your email">
-</div>
-<div hidden="">
-    <input type="hidden" name="tags" value="3021154">
-</div>
-<div id="mce-responses" class="clear foot">
-    <div class="response" id="mce-error-response" style="display: none;"></div>
-    <div class="response" id="mce-success-response" style="display: none;"></div>
-</div>
-<div aria-hidden="true" style="position: absolute; left: -5000px;">
-    <input type="text" name="b_05de59b78daa0dab3353ee611_8fc51d2f0b" tabindex="-1" value="">
-</div>
-<div class="optionalParent">
-    <div class="clear foot">
-        <button type="submit"
-                name="subscribe"
-                id="mc-embedded-subscribe"
-                class="learnbutton">
-            Subscribe <i class="fa-solid fa-arrow-right"></i>
-        </button>
-    </div>
-</div>
-</div>
-</form>
+    <main class="gallery-container">
+        <!-- Gallery grid -->
+        <div class="gallery-grid">
+          <!-- Example photo items -->
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_3642.JPG" alt="Event Photo 1" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_4969.jpg" alt="Event Photo 2" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_4847.jpg" alt="Event Photo 3" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_3398.jpg" alt="Event Photo 4" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_1828.jpg" alt="Event Photo 5" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_7201.jpg" alt="Event Photo 6" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_3484.jpg" alt="Event Photo 4" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_3462.jpg" alt="Event Photo 5" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/100_4904.jpeg" alt="Event Photo 6" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/Untitled design (1).jpg" alt="Event Photo 4" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_1810.jpg" alt="Event Photo 5" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_3638.JPG" alt="Event Photo 6" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/100_4895.jpeg" alt="Event Photo 4" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_3433.jpg" alt="Event Photo 5" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_3364.jpg" alt="Event Photo 6" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_0669.jpg" alt="Event Photo 4" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/IMG_6350.jpg" alt="Event Photo 5" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="resources/images/Gallery/LCMD WEBSITE Gallery/rahi.jpg" alt="Event Photo 6" class="gallery-image">
           </div>
         </div>
-      </div>
-    </div>
-  </footer>
+    
+        <!-- Modal for viewing full-size images -->
+        <div id="image-modal" class="modal">
+          <span class="close">&times;</span>
+          <img id="modal-image" class="modal-content" alt="">
+          <p id="modal-caption"></p>
+        </div>
+    </main>
 
-
-  <!-- Load Mailchimp validation script (ensure jQuery is loaded first) -->
-  <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-  <script>
-    (function($) {
-      window.fnames = new Array(); 
-      window.ftypes = new Array();
-      fnames[0] = 'EMAIL'; ftypes[0] = 'email';
-      fnames[1] = 'FNAME'; ftypes[1] = 'text';
-      fnames[2] = 'LNAME'; ftypes[2] = 'text';
-    }(jQuery));
-    var $mcj = jQuery.noConflict(true);
-  </script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="newsletter">
+                <p class="newsletter-label">NEWSLETTER</p>
+                <h2 class="newsletter-title">Subscribe our newsletter.</h2>
+                <div class="email-input">
+                    <input type="email" placeholder=" @ enter your email-address">
+                    <button><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-</html>
