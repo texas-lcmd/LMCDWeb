@@ -85,10 +85,11 @@ body {
     color: #2e1f15;
     transition: color 0.3s ease;
     text-decoration: none;
+    transition: color .5s ease;
 }
 
 .social-icons a:hover {
-    color: #bd724a;
+    color: white;
 }
 
 .contact-form {
