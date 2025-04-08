@@ -331,7 +331,7 @@
     max-width: 600px;
     margin: 0 auto; /* Centers the container itself */
     padding: 1rem; /* Outer padding around the elements */
-    border-radius: 50px;
+    border-radius: 40px;
     background-color: #f4e4d4;
     box-sizing: border-box;
     overflow: hidden;
@@ -340,7 +340,7 @@
   .email-input input {
     flex: 1;
     border: 1px solid #6c584c;
-    border-radius: 4px;
+    border-radius: 15px;
     padding: 12px;
     font-size: 1rem;
     color: #2e1f15;
