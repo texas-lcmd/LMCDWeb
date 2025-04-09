@@ -1,4 +1,4 @@
-/* Base Styles (Mobile-First) */
+
 
 :root {
     --primary-color: #bd724a;
@@ -13,17 +13,15 @@
     font-family: 'Space Mono', monospace;
   }
   
-  /* About Content */
   .about-content {
     padding: 15px;
-    font-family: 'Host Grotesk', sans-serif;
+    font-family: inherit;
   }
   
   .about-header {
     text-align: center;
     margin-bottom: 20px;
     padding: 0 10px;
-    font-family: 'Host Grotesk', sans-serif;
   }
   
   .about-header h1 {
@@ -34,10 +32,8 @@
   .about-header p {
     font-size: 1rem;
     color: var(--text-color);
-    font-family: 'Host Grotesk', sans-serif;
   }
   
-  /* Amounts Section */
   .about-amounts {
     display: flex;
     flex-wrap: wrap;
@@ -45,38 +41,31 @@
     align-items: center;
     margin-bottom: 30px;
     gap: 20px;
-    font-family: 'Host Grotesk', sans-serif;
   }
   
   .amount {
     text-align: center;
     flex: 1 1 200px;
-    font-family: 'Host Grotesk', sans-serif;
   }
   
   .amount h2 {
     font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 5px;
-    font-family: 'Host Grotesk', sans-serif;
   }
   
   .amount p {
     font-size: 1.2rem;
     text-transform: uppercase;
     color: var(--text-color);
-    font-family: 'Host Grotesk', sans-serif;
   }
   
-  /* Description Section */
   .about-description {
     text-align: center;
     line-height: 1.6;
     padding: 0 10px;
-    font-family: 'Host Grotesk', sans-serif;
   }
   
-  /* Learn More Button */
   .buttons {
     display: flex;
     justify-content: center;
@@ -101,30 +90,26 @@
     background-color: var(--primary-color);
   }
   
-  /* Officer Section */
   .officer-title {
     margin: 30px 0;
     padding: 20px;
     background-color: var(--navbar-color);
     text-align: center;
     position: relative;
-    font-family: 'Host Grotesk', sans-serif;
   }
   
   .officer-title h1 {
     font-size: 2rem;
     font-weight: bold;
     color: white;
-    font-family: 'Host Grotesk', sans-serif;
   }
   
   .officer-title p {
     font-size: 1.2rem;
     color: white;
-    font-family: 'Host Grotesk', sans-serif;
   }
   
-  /* Officer Cards */
+
   .officer-cards-line1, .officer-cards-line2 {
     padding: 20px 15px;
     display: flex;
@@ -133,7 +118,6 @@
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    font-family: 'Host Grotesk', sans-serif;
   }
   
   .officer-card {
@@ -146,7 +130,6 @@
     transition: background-color 0.3s ease-in;
     margin: 0;
     min-width: 150px;
-    font-family: 'Host Grotesk', sans-serif;
   }
   
   .officer-card:hover {
@@ -163,13 +146,11 @@
   .officer-card h3 {
     margin-top: 10px;
     font-size: 1.1rem;
-    font-family: 'Host Grotesk', sans-serif;
   }
   
   .officer-card p {
     margin: 5px;
     font-size: 0.9rem;
-    font-family: 'Host Grotesk', sans-serif;
   }
   
   /* Banner */
@@ -204,7 +185,6 @@
   
   /* Media Queries */
   
-  /* Tablets and larger devices */
   @media screen and (min-width: 480px) {
     .about-content {
       padding: 20px;
