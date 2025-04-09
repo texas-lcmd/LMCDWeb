@@ -10,7 +10,7 @@
   font-size: 2rem;
   text-align: center;
   padding: 20px;
-  font-family: 'Oswald', sans-serif !important;
+  font-family: 'Host Grotesk', sans-serif;
   position: relative;
 }
 
@@ -101,18 +101,21 @@
 .left-section h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  font-family: 'Host Grotesk', sans-serif;
 }
 
 .left-section p {
   font-size: 1.2rem;
   line-height: 1.5;
   margin-bottom: 30px;
+  font-family: 'Host Grotesk', sans-serif;
 }
 
 .buttons {
   display: flex;
   gap: 20px;
   justify-content: center;
+  font-family: 'Host Grotesk', sans-serif;
 }
 
 .buttons button {
@@ -129,12 +132,14 @@
   background-color: #6c584c;
   color: #fff;
   border: none;
+  font-family: 'Host Grotesk', sans-serif;
 }
 
 .secondary {
   background-color: transparent;
   border: 1px solid #6c584c;
   color: #6c584c;
+  font-family: 'Host Grotesk', sans-serif;
 }
 
 .buttons button:hover {
@@ -228,13 +233,15 @@
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px; 
-  color: #2e1f15; 
+  color: #2e1f15;
+  font-family: 'Host Grotesk', sans-serif;
 }
 
 .partners-text p {
   font-size: 1;
   color: #2e1f15;
   margin-bottom: 2rem;
+  font-family: 'Host Grotesk', sans-serif;
 }
 
 .partners-list {

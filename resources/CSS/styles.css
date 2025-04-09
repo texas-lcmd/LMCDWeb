@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     Padding: 0;
-    font-family: 'Host Grotesk', Courier, monospace;
 }
 
 .navbar {
@@ -16,6 +15,7 @@
     top: 0;
     z-index: 999;
     box-shadow: 0 5px 4px 0 rgba(0,0,0,.2);
+    font-family: 'Host Grotesk', sans-serif;
 }
 
 .navbar__container {
@@ -307,6 +307,7 @@
     border-radius: 20px; /* Rounded corners for the section */
     max-width: 600px;
     margin: 0 auto; /* Center the section */
+    font-family: 'Host Grotesk', sans-serif;
 }
 
 .newsletter-label {
@@ -315,6 +316,7 @@
     text-transform: uppercase;
     margin-bottom: 10px;
     opacity: 0.8;
+    font-family: 'Host Grotesk', sans-serif;
 }
 
 .newsletter-title {
@@ -322,6 +324,7 @@
     font-weight: bold;
     color: #f4e4d4; /* Matches beige text color */
     margin-bottom: 20px;
+    font-family: 'Host Grotesk', sans-serif;
 }
 
 .email-input {
@@ -335,9 +338,10 @@
     background-color: #f4e4d4;
     box-sizing: border-box;
     overflow: hidden;
-  }
+    font-family: 'Host Grotesk', sans-serif;
+}
   
-  .email-input input {
+.email-input input {
     flex: 1;
     border: 1px solid #6c584c;
     border-radius: 15px;
@@ -346,9 +350,10 @@
     color: #2e1f15;
     outline: none;
     text-align: center; /* Centers both placeholder and input text */
-  }
+    font-family: 'Host Grotesk', sans-serif;
+}
   
-  .email-input button {
+.email-input button {
     margin-left: 1rem; /* Spacing between inpt and button */
     background-color: #2e1f15;
     color: #f4e4d4;
@@ -357,11 +362,12 @@
     padding: 12px 24px;
     font-size: 1rem;
     cursor: pointer;
-  }
+    font-family: 'Host Grotesk', sans-serif;
+}
   
-  .email-input button:hover {
+.email-input button:hover {
     background-color: #bd724a;
-  }
+}
   
 #mc_embed_signup #mce-success-response {
     background-color: #bd724a; /* orange success message background */

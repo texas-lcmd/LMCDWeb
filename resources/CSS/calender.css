@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Host Grotesk', sans-serif;
 }
 
 .banner {
@@ -19,7 +20,7 @@ body {
     font-size: 1.5rem; /* Slightly smaller than index page */
     text-align: center;
     padding: 15px; /* Slightly smaller padding */
-    font-family: 'Oswald', sans-serif !important;
+    font-family: 'Host Grotesk', sans-serif;
     position: relative;
 }
 
@@ -51,6 +52,7 @@ body {
     text-align: center;
     background-color: #77543f;
     padding: 40px;
+    font-family: 'Host Grotesk', sans-serif;
 }
 
 .calender-container h1 {
@@ -58,6 +60,7 @@ body {
     margin: 20px;
     padding: 0;
     color: white;
+    font-family: 'Host Grotesk', sans-serif;
 }
 
 .calender-container iframe {
@@ -74,6 +77,7 @@ body {
     max-height: 800px;
     margin-bottom: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Host Grotesk', sans-serif;
 }
 
 /* Add custom styles for calendar background */

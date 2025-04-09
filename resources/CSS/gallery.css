@@ -34,16 +34,19 @@ body {
 /* Gallery container */
 .gallery-container {
     padding: 2rem;
-  }
+    font-family: 'Host Grotesk', sans-serif;
+}
   
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Maximum of three photos per row */
     gap: 1rem; /* Space between items */
+    font-family: 'Host Grotesk', sans-serif;
 }
   
 .gallery-item {
     position: relative;
+    font-family: 'Host Grotesk', sans-serif;
 }
   
 .gallery-image {
@@ -51,6 +54,7 @@ body {
     height: auto;
     border-radius: 8px;
     cursor: pointer;
+    font-family: 'Host Grotesk', sans-serif;
 }
   
   /* Modal styles */
@@ -64,20 +68,23 @@ body {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.8);
+    font-family: 'Host Grotesk', sans-serif;
 }
   
 .modal-content {
     margin: auto;
     display: block;
     max-width: calc(100% - 40px);
+    font-family: 'Host Grotesk', sans-serif;
 }
   
 #modal-caption {
     text-align: center;
+    font-family: 'Host Grotesk', sans-serif;
 }
   
 .close {
-    
+    font-family: 'Host Grotesk', sans-serif;
 }
 
 /* Responsive styles for gallery and footer */
