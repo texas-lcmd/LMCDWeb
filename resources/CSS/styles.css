@@ -226,8 +226,12 @@
 }
 
 @media screen and (max-width: 480px) {
+    #navbar__logo {
+        margin-left: 5px;
+    }
+    
     #navbar__logo img {
-        width: 70px;
+        width: 55px;
         height: auto;
     }
     

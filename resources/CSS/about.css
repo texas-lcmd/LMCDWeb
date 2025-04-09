@@ -77,7 +77,7 @@
   }
   
   .learnbutton {
-    background-color: var(--secondary-color);
+    background-color: var(--text-color);
     color: white;
     border: none;
     padding: 10px 15px;
@@ -87,7 +87,7 @@
     top: 10px;
     display: inline-block;
     text-decoration: none;
-    transition: background 0.3s ease-in;
+    transition: background-color 0.3s ease-in;
   }
   
   .learnbutton:hover {
