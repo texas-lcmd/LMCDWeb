@@ -135,3 +135,48 @@ body {
     background-color: #2e1f15;
     color: #f4e4d4;
 }
+
+.container {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: flex-start; /* Aligns items at the top */
+    gap: 20px; /* Adds spacing between sections */
+    max-width: 1200px; /* Optional: Restrict the width of the container */
+    margin: 0 auto; /* Centers the container on the page */
+    padding: 20px; /* Adds padding around the container */
+}
+
+.left-section, .right-section {
+    flex: 1; /* Ensures both sections take equal space */
+    max-width: 500px; /* Optional: Restrict the width of each section */
+}
+
+.right-section {
+    text-align: left; /* Ensures text alignment is consistent */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 990px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        text-align: center; /* Center text */
+        gap: 20px; /* Adjust spacing between elements */
+        padding: 20px; /* Add padding for smaller screens */
+        margin: 0 auto; /* Center the container */
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .contact-info, .contact-form, .social-icons {
+        max-width: 100%; /* Allow full width on smaller screens */
+        margin: 0 auto; /* Center the elements */
+        text-align: center; /* Center text */
+    }
+
+    .social-icons {
+        justify-content: center; /* Center the icons horizontally */
+        gap: 15px; /* Adjust spacing between icons */
+    }
+
+}
