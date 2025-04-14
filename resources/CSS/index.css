@@ -75,11 +75,6 @@
   font-size: 1.8rem;
 }
 
-.left-section p {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
 .left-section div {
   text-align: left;
 }
@@ -104,7 +99,7 @@
 }
 
 .left-section p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   margin-bottom: 30px;
 }
@@ -157,6 +152,37 @@
   }
 }
 
+
+@media (min-width: 350px) and (max-width: 630px) {
+  .banner {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .left-section h1 {
+    font-size: 2rem;
+  }
+
+  .left-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .banner {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .left-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .left-section p {
+    font-size: 0.75rem;
+  }
+}
+
 @media (max-width: 1035px) {
   .container::before {
     top: 173.5px;
@@ -170,13 +196,9 @@
 }
 
 @media (max-width: 630px) {
-  .banner {
-    font-size: 1.25rem;
-    padding: 15px;
-  }
 
   .container::before {
-    top: 216px;
+    top: 80px;
   }
 
   .left-section h1 {
@@ -200,9 +222,16 @@
 
 @media (max-width: 400px) {
   .container::before {
-    top: 269px;
+    top: 80px;
   }
 }
+
+@media (max-width: 630px) {
+  .banner {
+    display: none;
+  }
+}
+
 
 /*Partner section content */
 
@@ -303,11 +332,11 @@
   background-color: #BF5700;  
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .partners-container {
     flex-direction: column;
     align-items: center;
-    gap: 40px; /* Add spacing between text and list */
+    gap: 10px; /* Add spacing between text and list */
   }
 
   .partners-text {
