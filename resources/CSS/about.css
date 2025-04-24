@@ -1,10 +1,13 @@
-:root {
+/* ---------- Base Variables & Global Styles ---------- */
+/*color pallete*/
+:root{
   --primary-color: #bd724a;
   --secondary-color: #6c584c;
   --text-color: #2e1f15;
   --bg-color: #f4e4d4;
   --navbar-color: #745644;
   }
+  
   
   body {
   margin: 0;

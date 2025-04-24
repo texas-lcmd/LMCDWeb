@@ -1,9 +1,19 @@
+/* ---------- Base Variables & Global Styles ---------- */
+/*color pallete*/
+:root{
+    --primary-color: #bd724a;
+    --secondary-color: #6c584c;
+    --text-color: #2e1f15;
+    --bg-color: #f4e4d4;
+    --navbar-color: #745644;
+    }
+    
 body {
-    background-color: #f4e4d4;
+    background-color: var(--bg-color);
 }
-
+/* -------------------- */
 .banner {
-    background-color: #bd724a; /*LCMD Banner */
+    background-color: var(--primary-color); /*LCMD Banner */
     color: white;
     font-weight: bold;
     font-size: 1.5rem; /* Slightly smaller than index page */
