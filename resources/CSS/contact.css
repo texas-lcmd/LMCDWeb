@@ -1,7 +1,17 @@
+/* ---------- Base Variables & Global Styles ---------- */
+/*color pallete*/
+:root {
+    --primary-color: #bd724a;
+    --secondary-color: #6c584c;
+    --text-color: #2e1f15;
+    --bg-color: #f4e4d4;
+    --navbar-color: #745644;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
-    Padding: 0;
+    padding: 0;
     font-family: 'Host Grotesk', Courier, monospace;
 }
 
@@ -9,11 +19,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4e4d4;
+    background-color: var(--bg-color);
 }
 
 .banner {
-    background-color: #bd724a; /*LCMD Banner */
+    background-color: var(--primary-color); /*LCMD Banner */
     color: white;
     font-weight: bold;
     font-size: 1.5rem; /* Slightly smaller than index page */
@@ -46,7 +56,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    background-color: #bd724a;
+    background-color: var(--primary-color);
 }
 
 .contact-info {
@@ -56,17 +66,17 @@ body {
 
 .contact-info h1 {
     font-size: 2rem;
-    color: #2e1f15;
+    color: var(--text-color);
 }
 
 .contact-info p {
     margin: 10px 0;
-    color: #2e1f15;
+    color: var(--text-color);
 }
 
 .contact-info a {
     text-decoration: none;
-    color: #2e1f15;
+    color: var(--text-color);
 }
 
 .social-icons {
@@ -82,7 +92,7 @@ body {
 .social-icons a {
     font-size: 36px;
     margin: 0 15px;
-    color: #2e1f15;
+    color: var(--text-color);
     transition: color 0.3s ease;
     text-decoration: none;
     transition: color .5s ease;
@@ -100,7 +110,7 @@ body {
 .contact-form label {
     display: block;
     margin-top: 10px;
-    color: #2e1f15;
+    color: var(--text-color);
 }
 
 .contact-form input,
@@ -113,8 +123,8 @@ body {
 }
 
 .contact-form button {
-    background-color: #6c584c;
-    color: #f4e4d4;
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease-in;
@@ -126,14 +136,14 @@ body {
 
 .contact-form input,
 .contact-form textarea {
-    border: solid #6c584c thin;
-    background-color: #f4e4d4;
-    color: #2e1f15;
+    border: solid var(--secondary-color) thin;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .contact-form button:hover {
-    background-color: #2e1f15;
-    color: #f4e4d4;
+    background-color: var(--text-color);
+    color: var(--bg-color);
 }
 
 .container {

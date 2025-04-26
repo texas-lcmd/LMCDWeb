@@ -1,13 +1,24 @@
-* {
+/* ---------- Base Variables & Global Styles ---------- */
+:root {
+    --primary-color: #bd724a;
+    --secondary-color: #6c584c;
+    --text-color: #2e1f15;
+    --bg-color: #f4e4d4;
+    --accent-bg: #745644;
+  }
+
+
+  * {
     box-sizing: border-box;
     margin: 0;
     Padding: 0;
     font-family: 'Host Grotesk', Courier, monospace;
 }
+/* ---------- Base Variables & Global Styles ---------- */
 
 .navbar {
-    background-color: #745644;  /* nav bar */
-    height: 80px; /* Adjusted back to 80px since logo is smaller */
+    background-color: var(--accent-bg);
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +105,7 @@
     height: 2px;
     bottom: 0;
     left: 50%;
-    background-color: #2e1f15;
+    background-color: var(--text-color);
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -105,13 +116,13 @@
 }
 
 .navbar__links:hover {
-    color: #2e1f15;
+    color: var(--text-color);
     font-weight: 700;
 }
 
 .navbar__links.active {
     font-weight: 700;
-    color: #2e1f15;
+    color: var(--text-color);
 }
 
 .navbar__btn {
@@ -211,7 +222,7 @@
         top: 80px;
         left: 0;
         width: 100%;
-        background-color: #bd724a;
+        background-color: var(--primary-color);
         padding: 20px 0;
         flex-direction: column;
         text-align: center;
@@ -282,7 +293,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #745644;  /* footer color */
+    background-color: var(--accent-bg);  /* footer color */
     z-index: 0;
 }
 
@@ -327,7 +338,7 @@
 /* Newsletter Section */
 .newsletter {
     text-align: center;
-    background-color: #745644; /* Matches footer background */
+    background-color: var(--accent-bg); /* Matches footer background */
     padding: 40px 20px;
     border-radius: 20px; /* Rounded corners for the section */
     max-width: 600px;
@@ -336,7 +347,7 @@
 
 .newsletter-label {
     font-size: 1rem;
-    color: #f4e4d4; /* Light beige color for label */
+    color: var(--bg-color); /* Light beige color for label */
     text-transform: uppercase;
     margin-bottom: 10px;
     opacity: 0.8;
@@ -345,7 +356,7 @@
 .newsletter-title {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #f4e4d4; /* Matches beige text color */
+    color: var(--bg-color); /* Matches beige text color */
     margin-bottom: 20px;
 }
 
@@ -358,26 +369,26 @@
     margin: 0 auto; /* Centers the container itself */
     padding: 1rem; /* Outer padding around the elements */
     border-radius: 40px;
-    background-color: #f4e4d4;
+    background-color: var(--bg-color);
     box-sizing: border-box;
     overflow: hidden;
   }
   
   .email-input input {
     flex: 1;
-    border: 1px solid #6c584c;
+    border: 1px solid var(--secondary-color);
     border-radius: 15px;
     padding: 12px;
     font-size: 1rem;
-    color: #2e1f15;
+    color: var(--text-color);
     outline: none;
     text-align: center; /* Centers both placeholder and input text */
   }
   
   .email-input button {
     margin-left: 2rem; /* Spacing between inpt and button */
-    background-color: #2e1f15;
-    color: #f4e4d4;
+    background-color: var(--text-color);
+    color: var(--bg-color);
     border: none;
     border-radius: 4px;
     padding: 12px 24px;
@@ -387,22 +398,21 @@
   }
   
   .email-input button:hover {
-    background-color: #bd724a;
+    background-color: var(--primary-color);
   }
   
 #mc_embed_signup #mce-success-response {
-    background-color: #bd724a; /* orange success message background */
-    color: #f4e4d4; /* White text for success message */
+    background-color:var(--primary-color); /* orange success message background */
+    color: var(--bg-color); /* White text for success message */
     display: block;
     width: 100%;
     text-align: center;
     margin-top: 20px;
 }
 
-/* Error Message Styling (Optional) */
 #mc_embed_signup #mce-error-response {
     background-color: #ff6b6b; /* Red error message background */
-    color: #f4e4d4; /* White text for error message */
+    color: var(--bg-color); /* White text for error message */
     display: block;
     width: 100%;
     text-align: center;
